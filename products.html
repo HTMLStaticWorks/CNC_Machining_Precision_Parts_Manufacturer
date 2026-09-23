@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Products — Forgea</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body data-page="products">
   <div id="site-header"></div>
   <main>
     <section class="page-hero">
-      <div class="hero-bg" style="--bg:url('https://images.unsplash.com/photo-1740209475472-aa7d280f7452?auto=format&fit=crop&fm=jpg&q=85&w=1800')"></div>
+      <div class="hero-bg"
+        style="--bg:url('https://images.unsplash.com/photo-1740209475472-aa7d280f7452?auto=format&fit=crop&fm=jpg&q=85&w=1800')">
+      </div>
       <div class="container">
         <div class="eyebrow">PRODUCTS & CAPABILITIES</div>
         <h1>Components engineered<br><span>for the application.</span></h1>
-        <p>A comprehensive single-source overview of our CNC machined parts, custom components, volume production programs, and prototyping capabilities.</p>
+        <p>A comprehensive single-source overview of our CNC machined parts, custom components, volume production
+          programs, and prototyping capabilities.</p>
       </div>
     </section>
 
@@ -26,13 +32,17 @@
             <div class="eyebrow">PRODUCT CATEGORIES</div>
             <h2>Engineered parts portfolio.</h2>
           </div>
-          <p>Every component is manufactured under disciplined quality controls, tight tolerances, and documented engineering workflows.</p>
+          <p>Every component is manufactured under disciplined quality controls, tight tolerances, and documented
+            engineering workflows.</p>
         </div>
 
         <div class="card-grid four">
           <div class="cap-card">
             <span class="num">01</span>
-            <div class="visual v1"></div>
+            <div class="visual-box">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=85&w=800"
+                alt="Precision CNC Parts" class="visual-img" loading="lazy">
+            </div>
             <h3>Precision CNC Parts</h3>
             <p>Close-tolerance milled and turned parts designed for high-stress mechanical and aerospace assemblies.</p>
             <span class="link">±0.005mm Precision</span>
@@ -40,7 +50,9 @@
 
           <div class="cap-card">
             <span class="num">02</span>
-            <div class="visual v2"></div>
+            <div class="visual-box">
+              <img src="assets/images/machining_process.jpg" alt="Custom Components" class="visual-img" loading="lazy">
+            </div>
             <h3>Custom Components</h3>
             <p>Bespoke parts manufactured strictly from client CAD drawings with dedicated DFM engineering support.</p>
             <span class="link">100% Custom CAD</span>
@@ -48,7 +60,10 @@
 
           <div class="cap-card">
             <span class="num">03</span>
-            <div class="visual v4"></div>
+            <div class="visual-box">
+              <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&q=85&w=800"
+                alt="Production Runs" class="visual-img" loading="lazy">
+            </div>
             <h3>Production Runs</h3>
             <p>Repeatable manufacturing programs optimized for cycle consistency, lot traceability, and staging.</p>
             <span class="link">High Repeatability</span>
@@ -56,9 +71,13 @@
 
           <div class="cap-card">
             <span class="num">04</span>
-            <div class="visual v3"></div>
+            <div class="visual-box">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=85&w=800"
+                alt="Prototypes & Low-Volume" class="visual-img" loading="lazy">
+            </div>
             <h3>Prototypes & Low-Volume</h3>
-            <p>Rapid development parts (24–72h turnaround options) to validate fit, form, and function before tooling.</p>
+            <p>Rapid development parts (24–72h turnaround options) to validate fit, form, and function before tooling.
+            </p>
             <span class="link">Fast-Turn Delivery</span>
           </div>
         </div>
@@ -70,13 +89,15 @@
       <div class="container">
         <div class="eyebrow">DETAILED CAPABILITY BREAKDOWN</div>
         <h2>All product specifications on one page.</h2>
-        
+
         <div class="product-list">
           <div class="product-row" style="cursor:default">
             <span>01</span>
             <div>
               <h2>Precision CNC Parts</h2>
-              <p>Multi-axis CNC milled and lathe-turned components engineered for demanding industrial equipment, sensor housings, fluid control manifolds, and robotics assemblies. Produced with tight geometrical tolerances and documented surface finishes.</p>
+              <p>Multi-axis CNC milled and lathe-turned components engineered for demanding industrial equipment, sensor
+                housings, fluid control manifolds, and robotics assemblies. Produced with tight geometrical tolerances
+                and documented surface finishes.</p>
             </div>
             <b style="color:var(--green)">✓</b>
           </div>
@@ -85,7 +106,9 @@
             <span>02</span>
             <div>
               <h2>Custom Machined Components</h2>
-              <p>Tailored machining built directly from STEP, IGES, or DXF files. Includes comprehensive Design for Manufacturability (DFM) feedback to optimize part geometry, reduce machining cost, and ensure material integrity.</p>
+              <p>Tailored machining built directly from STEP, IGES, or DXF files. Includes comprehensive Design for
+                Manufacturability (DFM) feedback to optimize part geometry, reduce machining cost, and ensure material
+                integrity.</p>
             </div>
             <b style="color:var(--green)">✓</b>
           </div>
@@ -94,7 +117,9 @@
             <span>03</span>
             <div>
               <h2>Production Components</h2>
-              <p>Scalable production workflows designed for medium to high-volume orders. Features dedicated fixture tooling, continuous machine monitoring, automated deburring, and lot-level CMM dimensional reporting.</p>
+              <p>Scalable production workflows designed for medium to high-volume orders. Features dedicated fixture
+                tooling, continuous machine monitoring, automated deburring, and lot-level CMM dimensional reporting.
+              </p>
             </div>
             <b style="color:var(--green)">✓</b>
           </div>
@@ -103,7 +128,8 @@
             <span>04</span>
             <div>
               <h2>Prototypes & Low-Volume Parts</h2>
-              <p>Fast-turn prototype production (1 to 500+ units) allowing engineering teams to test physical parts under realistic operating conditions prior to full-scale manufacturing commitments.</p>
+              <p>Fast-turn prototype production (1 to 500+ units) allowing engineering teams to test physical parts
+                under realistic operating conditions prior to full-scale manufacturing commitments.</p>
             </div>
             <b style="color:var(--green)">✓</b>
           </div>
@@ -116,8 +142,9 @@
       <div class="container">
         <div class="eyebrow">MATERIALS & FINISHES</div>
         <h2>Technical capabilities & material support.</h2>
-        <p style="max-width: 720px; margin-bottom: 32px;">We process a wide spectrum of certified metals and engineering plastics with full material traceability certificates (MTR).</p>
-        
+        <p style="max-width: 720px; margin-bottom: 32px;">We process a wide spectrum of certified metals and engineering
+          plastics with full material traceability certificates (MTR).</p>
+
         <div class="material-grid">
           <span>Aluminum 6061-T6 / 7075-T6</span>
           <span>Stainless Steel 304 / 316L / 17-4PH</span>
@@ -156,17 +183,20 @@
           <div class="finish-card">
             <div class="finish-chip" style="background: linear-gradient(90deg, #303d3a, #7daa2d);"></div>
             <h3>Anodizing (Type II / III)</h3>
-            <p>Corrosion-resistant anodized coatings in clear, black, or custom colors. MIL-A-8625 Type III Hardcoat available.</p>
+            <p>Corrosion-resistant anodized coatings in clear, black, or custom colors. MIL-A-8625 Type III Hardcoat
+              available.</p>
           </div>
           <div class="finish-card">
             <div class="finish-chip" style="background: linear-gradient(90deg, #50615c, #a8b8b2);"></div>
             <h3>Bead Blasting & Passivation</h3>
-            <p>Uniform matte satin finish (Ra 0.8–1.6µm) removing tooling marks and chemical passivation for stainless steel.</p>
+            <p>Uniform matte satin finish (Ra 0.8–1.6µm) removing tooling marks and chemical passivation for stainless
+              steel.</p>
           </div>
           <div class="finish-card">
             <div class="finish-chip" style="background: linear-gradient(90deg, #18201e, #3a4a46);"></div>
             <h3>Electropolishing & Oxide</h3>
-            <p>Ultra-smooth mirror finish for pharmaceutical and semiconductor parts, or black oxide for steel components.</p>
+            <p>Ultra-smooth mirror finish for pharmaceutical and semiconductor parts, or black oxide for steel
+              components.</p>
           </div>
         </div>
       </div>
@@ -187,4 +217,5 @@
   <div id="site-footer"></div>
   <script src="assets/app.js"></script>
 </body>
+
 </html>

@@ -1,10 +1,68 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Forgea — Manufacturing Capacity</title><link rel="stylesheet" href="assets/style.css"></head>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Forgea — Manufacturing Capacity</title><link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="stylesheet" href="assets/style.css"></head>
 <body data-page="home2"><div id="site-header"></div>
 <main>
 <section class="hero hero-capacity"><div class="hero-bg" style="--bg:url('https://images.unsplash.com/photo-1764114235916-74de69e6851f?auto=format&fit=crop&fm=jpg&q=85&w=1800')"></div><div class="container hero-content"><div class="eyebrow">HOME 02 / PRODUCTION FOCUS</div><h1>Production capacity.<br><span>Engineering control.</span></h1><p>A focused manufacturing workflow for teams that need repeatability, visibility and documented quality.</p><div class="actions"><a class="btn btn-primary" href="contact.html">Request Production Quote ↗</a><a class="btn btn-ghost" href="dashboard.html">Client Portal</a></div></div></section>
-<section class="section"><div class="container"><div class="section-head"><div><div class="eyebrow">WORKFLOW</div><h2>A clear path to production.</h2></div></div><div class="timeline"><article><b>01</b><h3>Design Review</h3><p>Review geometry, material, tolerances and manufacturing requirements.</p></article><article><b>02</b><h3>Process Planning</h3><p>Define tooling, setups, inspection points and production sequence.</p></article><article><b>03</b><h3>Machining</h3><p>Run controlled CNC processes with documented production status.</p></article><article><b>04</b><h3>Inspection</h3><p>Verify critical dimensions and prepare quality documentation.</p></article></div></div></section>
-<section class="section dark-band"><div class="container split"><div><div class="eyebrow">PRODUCTION VISIBILITY</div><h2>Know where your order stands.</h2><p>Clients can use the portal concept to view order stages, quotes, files, invoices and inspection documents.</p></div><div class="dashboard-mini"><div class="mini-top">ORDER #FG-2048 <span>IN PRODUCTION</span></div><div class="bar"><i style="width:68%"></i></div><div class="mini-steps"><span>Quote</span><span>Review</span><span class="active">Machining</span><span>Inspection</span><span>Ship</span></div></div></div></section>
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">WORKFLOW</div>
+        <h2>A clear path to production.</h2>
+      </div>
+      <p>Disciplined stage gates from digital CAD file to verified delivery.</p>
+    </div>
+    <div class="timeline">
+      <article>
+        <div class="step-img-box">
+          <img src="assets/images/design_review.jpg" alt="Design Review Workflow" class="step-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/cnc_parts.svg';">
+        </div>
+        <b>01</b>
+        <h3>Design Review</h3>
+        <p>Review geometry, material, tolerances and automated DFM clearance.</p>
+      </article>
+      <article>
+        <div class="step-img-box">
+          <img src="assets/images/process_planning.jpg" alt="Process Planning" class="step-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/custom_components.svg';">
+        </div>
+        <b>02</b>
+        <h3>Process Planning</h3>
+        <p>Define tooling, setups, inspection points and G-code simulation.</p>
+      </article>
+      <article>
+        <div class="step-img-box">
+          <img src="assets/images/machining_process.jpg" alt="Machining Operations" class="step-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/production_runs.svg';">
+        </div>
+        <b>03</b>
+        <h3>Machining</h3>
+        <p>Run controlled CNC multi-axis milling and live-tooling turning.</p>
+      </article>
+      <article>
+        <div class="step-img-box">
+          <img src="assets/images/quality_inspection.svg" alt="Quality Inspection" class="step-img" loading="lazy">
+        </div>
+        <b>04</b>
+        <h3>Inspection</h3>
+        <p>Verify critical dimensions via Zeiss CMM and attach MTR documents.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section dark-band">
+  <div class="container split">
+    <div>
+      <div class="eyebrow">PRODUCTION VISIBILITY</div>
+      <h2>Know where your order stands.</h2>
+      <p>Clients can use the portal concept to view order stages, quotes, files, invoices and inspection documents.</p>
+    </div>
+    <div class="dashboard-mini">
+      <div class="mini-top">ORDER #FG-2048 <span>IN PRODUCTION</span></div>
+      <div class="bar"><i style="width:68%"></i></div>
+      <div class="mini-steps"><span>Quote</span><span>Review</span><span class="active">Machining</span><span>Inspection</span><span>Ship</span></div>
+    </div>
+  </div>
+</section>
 
 <!-- NEW SECTION 1: Live Machine Capacity Ticker -->
 <section class="section">
@@ -36,8 +94,33 @@
   </div>
 </section>
 
-<!-- NEW SECTION 2: Quality & ISO Compliance Seals -->
+<!-- NEW SECTION 2: DFM & Raw Material In-Stock Staging -->
 <section class="section dark-band">
+  <div class="container">
+    <div class="eyebrow">RAW MATERIAL STAGING</div>
+    <h2>Certified raw stock inventory ready to machine.</h2>
+    <div class="stock-staging-grid">
+      <div class="stock-item">
+        <span class="tag-badge">IN STOCK</span>
+        <h3>Aluminum 6061-T6 / 7075-T6</h3>
+        <p>Plate & round bar stock on floor. Immediate dispatch for 24h rush jobs.</p>
+      </div>
+      <div class="stock-item">
+        <span class="tag-badge">IN STOCK</span>
+        <h3>Stainless 304 / 316L / 17-4PH</h3>
+        <p>Passivated bar stock & precision plate with mill test reports (MTR).</p>
+      </div>
+      <div class="stock-item">
+        <span class="tag-badge">IN STOCK</span>
+        <h3>Titanium Gr 5 & Engineering Plastics</h3>
+        <p>Ti-6Al-4V aerospace billet & PEEK / Delrin rods for medical components.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEW SECTION 3: Quality & ISO Compliance Seals -->
+<section class="section">
   <div class="container">
     <div class="eyebrow">QUALITY CERTIFICATIONS</div>
     <h2>Documented quality compliance.</h2>
@@ -58,6 +141,16 @@
         <p>Dimensional inspection data provided with first-article and batch shipments.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="quote-banner">
+  <div class="container">
+    <div>
+      <div class="eyebrow">HAVE A DRAWING OR MODEL?</div>
+      <h2>Upload your CAD.<br>Start the conversation.</h2>
+    </div>
+    <a class="btn btn-primary" href="contact.html">Upload / Request Quote ↗</a>
   </div>
 </section>
 

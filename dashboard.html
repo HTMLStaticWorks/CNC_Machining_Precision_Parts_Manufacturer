@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Client Dashboard — Forgea</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-page="dashboard">
@@ -14,6 +15,24 @@
       <div class="dashboard-wrapper">
         <!-- Left Side Panel Navigation -->
         <aside class="dashboard-sidebar">
+          <!-- Mobile Drawer User Profile & Controls Block -->
+          <div class="dash-drawer-user">
+            <div class="header-user">
+              <div class="avatar">AJ</div>
+              <div class="user-info">
+                <strong>Alex Johnson</strong>
+                <small>Acme Industrial LLC</small>
+              </div>
+            </div>
+            <div class="dash-drawer-actions">
+              <a class="btn btn-ghost btn-sm btn-logout" href="index.html">Logout</a>
+              <div class="mobile-toggles">
+                <button class="rtl-toggle" type="button" aria-label="Toggle RTL mode" title="Toggle RTL layout alignment">RTL</button>
+                <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle light/dark theme">☾</button>
+              </div>
+            </div>
+          </div>
+
           <nav class="dash-menu">
             <button class="dash-tab active" data-tab="tab-overview">
               <span>📊 Overview</span>

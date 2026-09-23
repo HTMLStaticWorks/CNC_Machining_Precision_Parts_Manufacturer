@@ -146,6 +146,7 @@ const dashboardHeaderHTML = `
       <button class="rtl-toggle" type="button" aria-label="Toggle RTL mode" title="Toggle RTL layout alignment">RTL</button>
       <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle light/dark theme">☾</button>
     </div>
+    <button class="menu-toggle dash-menu-toggle" type="button" aria-label="Toggle portal menu" title="Open portal navigation menu">☰</button>
   </div>
 </header>`;
 
@@ -222,7 +223,7 @@ document.addEventListener('click', (e) => {
   }
 
   const dropBtn = e.target.closest('.dropbtn');
-  if (dropBtn && window.innerWidth <= 992) {
+  if (dropBtn && window.innerWidth <= 768) {
     e.preventDefault();
     const dropdown = dropBtn.closest('.dropdown');
     if (dropdown) {
@@ -231,8 +232,18 @@ document.addEventListener('click', (e) => {
     return;
   }
 
+  // Single Header Hamburger Toggle Handler
   const toggleBtn = e.target.closest('.menu-toggle');
   if (toggleBtn) {
+    // If on Dashboard page, toggle Dashboard Sidebar Drawer
+    const sidebar = document.querySelector('.dashboard-sidebar');
+    if (sidebar && window.innerWidth <= 768) {
+      sidebar.classList.toggle('open');
+      toggleBtn.setAttribute('aria-expanded', sidebar.classList.contains('open'));
+      return;
+    }
+
+    // Main Website Nav Links Drawer Toggle
     const navlinks = document.querySelector('.navlinks');
     if (navlinks) {
       navlinks.classList.toggle('open');
@@ -240,10 +251,23 @@ document.addEventListener('click', (e) => {
     }
     return;
   }
-  
+
+  // Close Main Nav Drawer on outside click
   const openNav = document.querySelector('.navlinks.open');
   if (openNav && !e.target.closest('.navlinks') && !e.target.closest('.menu-toggle')) {
     openNav.classList.remove('open');
+  }
+
+  // Close Dashboard Sidebar Drawer on tab click or outside click
+  const dashTab = e.target.closest('.dash-tab');
+  if (dashTab && window.innerWidth <= 768) {
+    const openSidebar = document.querySelector('.dashboard-sidebar.open');
+    if (openSidebar) openSidebar.classList.remove('open');
+  }
+
+  const openSidebar = document.querySelector('.dashboard-sidebar.open');
+  if (openSidebar && !e.target.closest('.dashboard-sidebar') && !e.target.closest('.menu-toggle')) {
+    openSidebar.classList.remove('open');
   }
 });
 
@@ -287,4 +311,65 @@ function togglePasswordVisibility(inputId, btn) {
   }
 }
 
+function highlightActiveMenu() {
+  let currentPath = window.location.pathname.split('/').pop().toLowerCase();
+  if (!currentPath || currentPath === '') {
+    currentPath = 'index.html';
+  }
+
+  const allNavLinks = document.querySelectorAll('.navlinks a, .dropmenu a');
+  allNavLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href || href === '#' || href.startsWith('javascript:')) return;
+    
+    const linkPath = href.split('/').pop().toLowerCase();
+    
+    if (linkPath === currentPath) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+      
+      const parentDropdown = link.closest('.dropdown');
+      if (parentDropdown) {
+        parentDropdown.classList.add('active');
+        const dropBtn = parentDropdown.querySelector('.dropbtn');
+        if (dropBtn) {
+          dropBtn.classList.add('active');
+        }
+      }
+    }
+  });
+}
+
+function initBackToTop() {
+  let btn = document.getElementById('back-to-top');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.id = 'back-to-top';
+    btn.className = 'back-to-top';
+    btn.setAttribute('type', 'button');
+    btn.setAttribute('aria-label', 'Back to top');
+    btn.setAttribute('title', 'Back to top');
+    btn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>`;
+    document.body.appendChild(btn);
+  }
+
+  const toggleVisibility = () => {
+    if (window.scrollY > 280) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  };
+
+  window.addEventListener('scroll', toggleVisibility, { passive: true });
+  toggleVisibility();
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+highlightActiveMenu();
+initBackToTop();
 initDashboardTabs();
+

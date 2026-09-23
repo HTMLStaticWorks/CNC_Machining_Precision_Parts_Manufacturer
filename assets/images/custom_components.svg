@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 375" width="100%" height="100%">
+  <rect width="600" height="375" fill="#0d1415"/>
+  <rect x="15" y="15" width="570" height="345" fill="none" stroke="rgba(155,211,63,0.15)" stroke-width="1" rx="6"/>
+  <!-- CAD Blueprint Custom Block -->
+  <g transform="translate(140, 50)">
+    <polygon points="60,180 200,240 340,160 200,100" fill="#3a4b48" stroke="#9bd33f" stroke-width="2"/>
+    <polygon points="60,180 200,240 200,280 60,220" fill="#243230" stroke="#7e9490" stroke-width="2"/>
+    <polygon points="200,240 340,160 340,200 200,280" fill="#182524" stroke="#7e9490" stroke-width="2"/>
+  </g>
+  <text x="30" y="340" fill="#9bd33f" font-family="monospace" font-size="13">CUSTOM CAD COMPONENTS — 100% SPEC</text>
+</svg>
