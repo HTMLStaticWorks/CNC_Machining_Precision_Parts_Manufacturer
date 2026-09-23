@@ -1,6 +1,275 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Client Dashboard — Forgea</title><link rel="stylesheet" href="assets/style.css"></head><body data-page="dashboard"><div id="dashboard-header"></div><main class="dashboard-main"><div class="container"><div class="dash-head"><div><div class="eyebrow">CLIENT PORTAL</div><h1>Good morning, Alex.</h1><p>Here is the current status of your manufacturing workspace.</p></div><a class="btn btn-primary" href="contact.html">New Quote ↗</a></div>
-<div class="dash-grid"><div class="dash-card"><span>ACTIVE ORDERS</span><strong>03</strong><small>1 currently machining</small></div><div class="dash-card"><span>OPEN QUOTES</span><strong>02</strong><small>Awaiting your review</small></div><div class="dash-card"><span>FILES</span><strong>18</strong><small>CAD & quality documents</small></div><div class="dash-card"><span>INVOICES</span><strong>04</strong><small>1 payment pending</small></div></div>
-<div class="dashboard-layout"><section class="dash-panel"><div class="panel-head"><h2>Order #FG-2048</h2><span class="status">IN PRODUCTION</span></div><p>Precision aluminum housing · Qty 120</p><div class="order-progress"><div class="bar"><i style="width:68%"></i></div><div class="progress-labels"><span>Quote</span><span>Engineering</span><span class="active">Machining</span><span>Inspection</span><span>Shipping</span></div></div><div class="order-table"><div><span>Expected completion</span><b>24 Sep 2026</b></div><div><span>Material</span><b>6061 Aluminum</b></div><div><span>Drawing revision</span><b>REV B</b></div></div></section>
-<aside class="dash-panel"><div class="panel-head"><h2>Recent files</h2><a href="#">View all</a></div><ul class="file-list"><li>FG-2048_REV-B.step <small>CAD · 12.4 MB</small></li><li>Inspection_Report_2048.pdf <small>Quality · 1.8 MB</small></li><li>Quote_2049.pdf <small>Quote · 420 KB</small></li><li>Material_Cert_2048.pdf <small>Certificate · 780 KB</small></li></ul></aside></div>
-<div class="dashboard-nav"><a class="active">Overview</a><a>Orders</a><a>Quotes</a><a>Production</a><a>Quality Reports</a><a>Invoices</a><a>CAD Files</a><a>Account Settings</a></div>
-</div></main><script src="assets/app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Client Dashboard — Forgea</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="dashboard">
+  <div id="dashboard-header"></div>
+  <main class="dashboard-main">
+    <div class="container">
+      
+      <div class="dashboard-wrapper">
+        <!-- Left Side Panel Navigation -->
+        <aside class="dashboard-sidebar">
+          <nav class="dash-menu">
+            <button class="dash-tab active" data-tab="tab-overview">
+              <span>📊 Overview</span>
+            </button>
+            <button class="dash-tab" data-tab="tab-orders">
+              <span>📦 Active Orders</span> <span class="badge">3</span>
+            </button>
+            <button class="dash-tab" data-tab="tab-quotes">
+              <span>📄 Open Quotes</span> <span class="badge">2</span>
+            </button>
+            <button class="dash-tab" data-tab="tab-production">
+              <span>⚙️ Live Production</span>
+            </button>
+            <button class="dash-tab" data-tab="tab-quality">
+              <span>✓ Quality Reports</span>
+            </button>
+            <button class="dash-tab" data-tab="tab-invoices">
+              <span>💳 Invoices & Billing</span>
+            </button>
+            <button class="dash-tab" data-tab="tab-files">
+              <span>📁 CAD & Drawings</span>
+            </button>
+            <button class="dash-tab" data-tab="tab-settings">
+              <span>⚙ Account Settings</span>
+            </button>
+          </nav>
+        </aside>
+
+        <!-- Main Interactive Content Panes -->
+        <div class="dashboard-content">
+          
+          <!-- TAB 1: OVERVIEW -->
+          <div class="tab-pane active" id="tab-overview">
+            <div class="dash-head">
+              <div>
+                <div class="eyebrow">CLIENT PORTAL / OVERVIEW</div>
+                <h1>Good morning, Alex.</h1>
+                <p>Here is the current status of your manufacturing workspace.</p>
+              </div>
+              <a class="btn btn-primary" href="contact.html">New Quote ↗</a>
+            </div>
+
+            <div class="dash-grid">
+              <div class="dash-card"><span>ACTIVE ORDERS</span><strong>03</strong><small>1 currently machining</small></div>
+              <div class="dash-card"><span>OPEN QUOTES</span><strong>02</strong><small>Awaiting your review</small></div>
+              <div class="dash-card"><span>FILES</span><strong>18</strong><small>CAD & quality documents</small></div>
+              <div class="dash-card"><span>INVOICES</span><strong>04</strong><small>1 payment pending</small></div>
+            </div>
+
+            <div class="dashboard-layout">
+              <section class="dash-panel">
+                <div class="panel-head"><h2>Order #FG-2048</h2><span class="status">IN PRODUCTION</span></div>
+                <p>Precision aluminum housing · Qty 120</p>
+                <div class="order-progress">
+                  <div class="bar"><i style="width:68%"></i></div>
+                  <div class="progress-labels"><span>Quote</span><span>Engineering</span><span class="active">Machining</span><span>Inspection</span><span>Shipping</span></div>
+                </div>
+                <div class="order-table">
+                  <div><span>Expected completion</span><b>24 Sep 2026</b></div>
+                  <div><span>Material</span><b>6061 Aluminum</b></div>
+                  <div><span>Drawing revision</span><b>REV B</b></div>
+                </div>
+              </section>
+
+              <aside class="dash-panel">
+                <div class="panel-head"><h2>Recent files</h2><a href="#" onclick="switchDashTab('tab-files'); return false;">View all</a></div>
+                <ul class="file-list">
+                  <li>FG-2048_REV-B.step <small>CAD · 12.4 MB</small></li>
+                  <li>Inspection_Report_2048.pdf <small>Quality · 1.8 MB</small></li>
+                  <li>Quote_2049.pdf <small>Quote · 420 KB</small></li>
+                  <li>Material_Cert_2048.pdf <small>Certificate · 780 KB</small></li>
+                </ul>
+              </aside>
+            </div>
+
+            <!-- NEW SECTION: Live Machining Telemetry Stream -->
+            <div class="dash-panel" style="margin-top: 24px;">
+              <div class="panel-head">
+                <div>
+                  <h2>Live Plant Machine Telemetry</h2>
+                  <small style="color:var(--muted)">Real-time automated status updates for active production jobs.</small>
+                </div>
+                <span class="status" style="background:rgba(155,211,63,0.15); color:var(--green)">LIVE TELEMETRY STREAM</span>
+              </div>
+              <div class="telemetry-stream">
+                <div class="telemetry-line"><time>13:42:05</time> <span>[Haas UMC-750 #2] Operation 3/4 Rough Milling completed on Order #FG-2048 (Qty: 120).</span></div>
+                <div class="telemetry-line"><time>11:15:20</time> <span>[Zeiss CMM Station] First Article Inspection passed for Order #FG-2048 (Pass rate: 100%).</span></div>
+                <div class="telemetry-line"><time>09:30:00</time> <span>[Material Staging] Raw 6061-T6 Billet stock verified & loaded into spindle bay 4.</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: ORDERS -->
+          <div class="tab-pane" id="tab-orders">
+            <div class="dash-head">
+              <div>
+                <div class="eyebrow">CLIENT PORTAL / ORDERS</div>
+                <h1>Active Orders & History</h1>
+                <p>Track all current manufacturing jobs and past fulfilled shipments.</p>
+              </div>
+              <a class="btn btn-primary" href="contact.html">Request New Order ↗</a>
+            </div>
+
+            <div class="dash-panel">
+              <table class="dash-table">
+                <thead>
+                  <tr><th>Order ID</th><th>Part Description</th><th>Qty</th><th>Material</th><th>Status</th><th>Est. Delivery</th><th>Action</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><b>#FG-2048</b></td><td>Precision Aluminum Housing</td><td>120 pcs</td><td>6061-T6 Al</td><td><span class="status">IN PRODUCTION</span></td><td>24 Sep 2026</td><td><button class="btn-sm" onclick="switchDashTab('tab-production')">Track</button></td></tr>
+                  <tr><td><b>#FG-2045</b></td><td>Stainless Sensor Bracket</td><td>45 pcs</td><td>316L SS</td><td><span class="status">QUALITY INSPECTION</span></td><td>26 Sep 2026</td><td><button class="btn-sm" onclick="switchDashTab('tab-quality')">View CMM</button></td></tr>
+                  <tr><td><b>#FG-2039</b></td><td>Titanium Manifold Mount</td><td>10 pcs</td><td>Ti-6Al-4V</td><td><span class="status">SCHEDULED</span></td><td>30 Sep 2026</td><td><button class="btn-sm" onclick="switchDashTab('tab-overview')">Details</button></td></tr>
+                  <tr><td><b>#FG-2012</b></td><td>Brass Bushing Set</td><td>500 pcs</td><td>C360 Brass</td><td><span style="color:#789088">COMPLETED</span></td><td>14 Sep 2026</td><td><button class="btn-sm" onclick="switchDashTab('tab-invoices')">Invoice</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TAB 3: QUOTES -->
+          <div class="tab-pane" id="tab-quotes">
+            <div class="dash-head">
+              <div>
+                <div class="eyebrow">CLIENT PORTAL / QUOTES</div>
+                <h1>Open Quotes & Proposals</h1>
+                <p>Review active engineering quotes and submit new CAD files for pricing.</p>
+              </div>
+              <a class="btn btn-primary" href="contact.html">Submit CAD File ↗</a>
+            </div>
+
+            <div class="dash-grid two" style="grid-template-columns: 1fr 1fr;">
+              <div class="dash-panel">
+                <div class="panel-head"><h2>Quote #Q-2049 — Aerospace Bracket</h2><span class="status">READY FOR REVIEW</span></div>
+                <p style="margin: 12px 0;">Qty: 25 pcs · Material: 7075-T6 Aluminum · Lead Time: 5 Days</p>
+                <div style="font-size: 24px; font-weight: 900; color: var(--green); margin: 16px 0;">$2,450.00 USD</div>
+                <div class="actions" style="display:flex; gap:10px;"><button class="btn btn-primary" onclick="alert('Quote accepted! Moving to engineering review.')">Accept Quote ↗</button><a class="btn btn-ghost" href="contact.html">Request Revision</a></div>
+              </div>
+
+              <div class="dash-panel">
+                <div class="panel-head"><h2>Quote #Q-2051 — Custom Enclosure</h2><span style="color:#e0a030">CALCULATING DFM</span></div>
+                <p style="margin: 12px 0;">Qty: 100 pcs · Material: Stainless Steel 304 · Submitted: Today</p>
+                <p style="color:var(--muted)">Our engineering team is conducting DFM clearance checks on your uploaded STEP file.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 4: PRODUCTION TRACKER -->
+          <div class="tab-pane" id="tab-production">
+            <div class="dash-head">
+              <div>
+                <div class="eyebrow">CLIENT PORTAL / PRODUCTION</div>
+                <h1>Live Production Tracker</h1>
+                <p>Real-time machine status and stage updates for active jobs.</p>
+              </div>
+            </div>
+
+            <div class="dash-panel">
+              <div class="panel-head"><h2>Order #FG-2048 — Multi-Axis Milling Cycle</h2><span class="status">MACHINE RUNNING (SPINDLE ACTIVE)</span></div>
+              <div class="order-progress" style="margin: 28px 0 18px;">
+                <div class="bar"><i style="width:68%"></i></div>
+                <div class="progress-labels"><span>01 CAD Review ✓</span><span>02 Tooling Setup ✓</span><span class="active">03 5-Axis Milling (68%)</span><span>04 CMM Inspection</span><span>05 Dispatch</span></div>
+              </div>
+              <div class="order-table">
+                <div><span>Active Machine</span><b>Mori Seiki 5-Axis #03</b></div>
+                <div><span>Cycle Time / Part</span><b>14m 22s</b></div>
+                <div><span>Completed Parts</span><b>82 / 120 Units</b></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 5: QUALITY REPORTS -->
+          <div class="tab-pane" id="tab-quality">
+            <div class="dash-head">
+              <div>
+                <div class="eyebrow">CLIENT PORTAL / QUALITY REPORTS</div>
+                <h1>Inspection & Compliance Reports</h1>
+                <p>Download CMM dimensional checks, material test certificates (MTR), and FAI documents.</p>
+              </div>
+            </div>
+
+            <div class="dash-panel">
+              <ul class="file-list">
+                <li style="display:flex; justify-content:space-between; align-items:center;"><div><b>CMM_Report_FG-2048_LotA.pdf</b><small>100% Dimensional Inspection · 1.8 MB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading CMM Inspection Report...'); return false;">Download ↗</a></li>
+                <li style="display:flex; justify-content:space-between; align-items:center;"><div><b>Material_Cert_6061-T6_Heat8812.pdf</b><small>Mill Test Certificate · 780 KB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading Material Test Certificate...'); return false;">Download ↗</a></li>
+                <li style="display:flex; justify-content:space-between; align-items:center;"><div><b>First_Article_Inspection_FAI_2045.pdf</b><small>AS9102 Form 1-3 · 2.4 MB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading FAI Report...'); return false;">Download ↗</a></li>
+                <li style="display:flex; justify-content:space-between; align-items:center;"><div><b>Certificate_of_Conformance_FG2039.pdf</b><small>CoC Compliance · 520 KB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading CoC Document...'); return false;">Download ↗</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- TAB 6: INVOICES -->
+          <div class="tab-pane" id="tab-invoices">
+            <div class="dash-head">
+              <div>
+                <div class="eyebrow">CLIENT PORTAL / INVOICES</div>
+                <h1>Billing & Invoices</h1>
+                <p>View payment receipts, pending invoices, and credit terms.</p>
+              </div>
+            </div>
+
+            <div class="dash-panel">
+              <table class="dash-table">
+                <thead><tr><th>Invoice #</th><th>Order Reference</th><th>Date</th><th>Amount</th><th>Status</th><th>Download</th></tr></thead>
+                <tbody>
+                  <tr><td><b>INV-8891</b></td><td>#FG-2048 (Deposit)</td><td>10 Sep 2026</td><td>$1,850.00</td><td><span class="status">PAID</span></td><td><a class="btn-sm" href="#" onclick="alert('Downloading Invoice INV-8891 PDF'); return false;">PDF ↗</a></td></tr>
+                  <tr><td><b>INV-8899</b></td><td>#FG-2045 (Balance)</td><td>20 Sep 2026</td><td>$920.00</td><td><span style="color:#e0a030">PENDING (Net 30)</span></td><td><a class="btn-sm" href="#" onclick="alert('Downloading Invoice INV-8899 PDF'); return false;">PDF ↗</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TAB 7: CAD FILES -->
+          <div class="tab-pane" id="tab-files">
+            <div class="dash-head">
+              <div>
+                <div class="eyebrow">CLIENT PORTAL / CAD FILES</div>
+                <h1>CAD Models & Drawings</h1>
+                <p>Repository of all uploaded STEP, IGES, DXF and drawing revision files.</p>
+              </div>
+              <a class="btn btn-primary" href="contact.html">Upload File ↗</a>
+            </div>
+
+            <div class="dash-panel">
+              <ul class="file-list">
+                <li style="display:flex; justify-content:space-between; align-items:center;"><div><b>FG-2048_REV-B.step</b><small>3D Solid Model · 12.4 MB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading STEP File...'); return false;">Download STEP</a></li>
+                <li style="display:flex; justify-content:space-between; align-items:center;"><div><b>FG-2048_Tolerance_Drawing.pdf</b><small>2D Blueprint with GD&T · 3.1 MB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading 2D Blueprint...'); return false;">Download PDF</a></li>
+                <li style="display:flex; justify-content:space-between; align-items:center;"><div><b>Sensor_Bracket_REV3.iges</b><small>CAD Surface Geometry · 8.9 MB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading IGES File...'); return false;">Download IGES</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- TAB 8: ACCOUNT SETTINGS -->
+          <div class="tab-pane" id="tab-settings">
+            <div class="dash-head">
+              <div>
+                <div class="eyebrow">CLIENT PORTAL / SETTINGS</div>
+                <h1>Account & Profile Settings</h1>
+                <p>Manage company details, shipping addresses, and notification preferences.</p>
+              </div>
+            </div>
+
+            <div class="dash-panel" style="max-width: 650px;">
+              <form id="settingsForm" onsubmit="event.preventDefault(); alert('Account settings saved successfully.');">
+                <label>Full Name<input type="text" value="Alex Johnson"></label>
+                <label>Company Name<input type="text" value="Acme Industrial LLC"></label>
+                <label>Work Email<input type="email" value="alex@acme-industrial.example"></label>
+                <label>Phone Number<input type="tel" value="+1 (555) 234-5678"></label>
+                <button class="btn btn-primary" style="margin-top: 14px;">Save Settings ↗</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <script src="assets/app.js"></script>
+</body>
+</html>

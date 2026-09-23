@@ -6,11 +6,7 @@ const i18n = {
     'nav-home1': 'Home 1',
     'nav-home2': 'Home 2',
     'nav-about': 'ABOUT',
-    'nav-products': 'PRODUCTS ▾',
-    'nav-prod1': 'Precision CNC Parts',
-    'nav-prod2': 'Custom Machined Components',
-    'nav-prod3': 'Production Components',
-    'nav-prod4': 'Prototypes & Low-Volume Parts',
+    'nav-products': 'PRODUCTS',
     'nav-services': 'SERVICES ▾',
     'nav-serv1': 'CNC Milling',
     'nav-serv2': 'CNC Turning',
@@ -59,11 +55,7 @@ const i18n = {
     'nav-home1': 'الصفحة الرئيسية 1',
     'nav-home2': 'الصفحة الرئيسية 2',
     'nav-about': 'حول الشركة',
-    'nav-products': 'المنتجات ▾',
-    'nav-prod1': 'قطع CNC عالية الدقة',
-    'nav-prod2': 'مكونات ميكانيكية مخصصة',
-    'nav-prod3': 'مكونات الإنتاج',
-    'nav-prod4': 'نماذج أولية وأجزاء منخفضة الحجم',
+    'nav-products': 'المنتجات',
     'nav-services': 'الخدمات ▾',
     'nav-serv1': 'تفريز CNC',
     'nav-serv2': 'خراطة CNC',
@@ -115,9 +107,17 @@ const headerHTML = `
     <nav class="navlinks">
       <div class="dropdown"><button class="dropbtn">HOME ▾</button><div class="dropmenu"><a href="index.html">Home 1</a><a href="home-2.html">Home 2</a></div></div>
       <a href="about.html">ABOUT</a>
-      <div class="dropdown"><button class="dropbtn">PRODUCTS ▾</button><div class="dropmenu"><a href="products.html">Precision CNC Parts</a><a href="products.html">Custom Machined Components</a><a href="products.html">Production Components</a><a href="prototyping.html">Prototypes & Low-Volume Parts</a></div></div>
+      <a href="products.html">PRODUCTS</a>
       <div class="dropdown"><button class="dropbtn">SERVICES ▾</button><div class="dropmenu"><a href="milling.html">CNC Milling</a><a href="turning.html">CNC Turning</a><a href="prototyping.html">Prototyping & Engineering</a></div></div>
       <a href="contact.html">CONTACT</a>
+      <div class="mobile-actions">
+        <a class="btn btn-ghost btn-login" href="login.html">LOGIN</a>
+        <a class="btn btn-primary btn-dash" href="dashboard.html">DASHBOARD ↗</a>
+        <div class="mobile-toggles">
+          <button class="rtl-toggle" type="button" aria-label="Toggle RTL mode" title="Toggle RTL layout alignment">RTL</button>
+          <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle light/dark theme">☾</button>
+        </div>
+      </div>
     </nav>
     <div class="header-actions">
       <a class="btn btn-ghost btn-login" href="login.html">LOGIN</a>
@@ -125,7 +125,27 @@ const headerHTML = `
       <button class="rtl-toggle" type="button" aria-label="Toggle RTL mode" title="Toggle RTL layout alignment">RTL</button>
       <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle light/dark theme">☾</button>
     </div>
-    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" title="Open navigation menu">☰</button>
+  </div>
+</header>`;
+
+const dashboardHeaderHTML = `
+<header class="header">
+  <div class="utility"><div class="container"><span>CLIENT PORTAL — FORGEA MANUFACTURING</span><span>Alex Johnson · Account #FG-9021</span></div></div>
+  <div class="container nav">
+    <a class="brand" href="index.html" title="Back to main website"><i aria-label="Forgea logo"></i></a>
+    <div class="header-actions" style="margin-left: auto;">
+      <div class="header-user">
+        <div class="avatar">AJ</div>
+        <div class="user-info">
+          <strong>Alex Johnson</strong>
+          <small>Acme Industrial LLC</small>
+        </div>
+      </div>
+      <a class="btn btn-ghost" href="index.html">Logout</a>
+      <button class="rtl-toggle" type="button" aria-label="Toggle RTL mode" title="Toggle RTL layout alignment">RTL</button>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle light/dark theme">☾</button>
+    </div>
   </div>
 </header>`;
 
@@ -138,7 +158,7 @@ const footerHTML = `
 </div><div class="footer-newsletter"><div><h4>ENGINEERING UPDATES</h4><small>Occasional manufacturing insights. No noise.</small></div><form class="newsletter-form" id="newsletterForm"><input type="email" placeholder="Work email" required><button class="btn btn-primary">Subscribe</button></form></div><div class="copyright"><span>© 2026 Forgea. Website concept.</span><span>Privacy · Terms · Cookies</span></div></div></footer>`;
 
 const hh=document.getElementById('site-header'); if(hh) hh.innerHTML=headerHTML;
-const dh=document.getElementById('dashboard-header'); if(dh) dh.innerHTML=headerHTML;
+const dh=document.getElementById('dashboard-header'); if(dh) dh.innerHTML=dashboardHeaderHTML;
 const ff=document.getElementById('site-footer'); if(ff) ff.innerHTML=footerHTML;
 
 function applyTranslations(lang) {
@@ -191,9 +211,80 @@ function bindTheme(){
 bindTheme();
 bindRTL();
 
-const toggle=document.querySelector('.menu-toggle');
-if(toggle){toggle.addEventListener('click',()=>{let n=document.querySelector('.navlinks'); if(n){n.style.display=n.style.display==='flex'?'none':'flex';n.style.position='absolute';n.style.top='64px';n.style.left='0';n.style.right='0';n.style.background=getComputedStyle(document.body).getPropertyValue('--bg');n.style.padding='18px';n.style.flexDirection='column';n.style.alignItems='stretch';n.style.margin='0';n.style.borderBottom='1px solid #2b3533'}})}
+document.addEventListener('click', (e) => {
+  const faqBtn = e.target.closest('.faq-question');
+  if (faqBtn) {
+    const item = faqBtn.closest('.faq-item');
+    if (item) {
+      item.classList.toggle('open');
+    }
+    return;
+  }
+
+  const dropBtn = e.target.closest('.dropbtn');
+  if (dropBtn && window.innerWidth <= 992) {
+    e.preventDefault();
+    const dropdown = dropBtn.closest('.dropdown');
+    if (dropdown) {
+      dropdown.classList.toggle('open');
+    }
+    return;
+  }
+
+  const toggleBtn = e.target.closest('.menu-toggle');
+  if (toggleBtn) {
+    const navlinks = document.querySelector('.navlinks');
+    if (navlinks) {
+      navlinks.classList.toggle('open');
+      toggleBtn.setAttribute('aria-expanded', navlinks.classList.contains('open'));
+    }
+    return;
+  }
+  
+  const openNav = document.querySelector('.navlinks.open');
+  if (openNav && !e.target.closest('.navlinks') && !e.target.closest('.menu-toggle')) {
+    openNav.classList.remove('open');
+  }
+});
 
 function demoForm(id,msg){const f=document.getElementById(id);if(f)f.addEventListener('submit',e=>{e.preventDefault();const m=document.getElementById(msg);if(m)m.textContent='Demo submitted successfully. Connect this form to your backend/email service for production use.';f.reset()})}
 demoForm('quoteForm','formMessage'); demoForm('signupForm','signupMessage'); demoForm('newsletterForm','newsletterMessage');
 const login=document.getElementById('loginForm'); if(login)login.addEventListener('submit',e=>{e.preventDefault();document.getElementById('loginMessage').innerHTML='Demo login accepted. <a href="dashboard.html">Open dashboard →</a>'});
+
+function switchDashTab(tabId) {
+  const tabs = document.querySelectorAll('.dash-tab');
+  const panes = document.querySelectorAll('.tab-pane');
+  if (!tabs.length) return;
+  tabs.forEach(t => {
+    t.classList.toggle('active', t.getAttribute('data-tab') === tabId);
+  });
+  panes.forEach(p => {
+    p.classList.toggle('active', p.id === tabId);
+  });
+}
+
+function initDashboardTabs() {
+  const tabs = document.querySelectorAll('.dash-tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-tab');
+      if (target) switchDashTab(target);
+    });
+  });
+}
+
+function togglePasswordVisibility(inputId, btn) {
+  const input = document.getElementById(inputId);
+  if (!input) return;
+  if (input.type === 'password') {
+    input.type = 'text';
+    btn.textContent = '🙈';
+    btn.setAttribute('title', 'Hide password');
+  } else {
+    input.type = 'password';
+    btn.textContent = '👁';
+    btn.setAttribute('title', 'Show password');
+  }
+}
+
+initDashboardTabs();
