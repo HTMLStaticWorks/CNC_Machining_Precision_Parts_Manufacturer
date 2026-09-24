@@ -115,7 +115,7 @@
                   <h2>Live Plant Machine Telemetry</h2>
                   <small style="color:var(--muted)">Real-time automated status updates for active production jobs.</small>
                 </div>
-                <span class="status" style="background:rgba(155,211,63,0.15); color:var(--green)">LIVE TELEMETRY STREAM</span>
+                <span class="status status-live">LIVE TELEMETRY STREAM</span>
               </div>
               <div class="telemetry-stream">
                 <div class="telemetry-line"><time>13:42:05</time> <span>[Haas UMC-750 #2] Operation 3/4 Rough Milling completed on Order #FG-2048 (Qty: 120).</span></div>
@@ -162,7 +162,7 @@
               <a class="btn btn-primary" href="contact.html">Submit CAD File ↗</a>
             </div>
 
-            <div class="dash-grid two" style="grid-template-columns: 1fr 1fr;">
+            <div class="dash-grid two">
               <div class="dash-panel">
                 <div class="panel-head"><h2>Quote #Q-2049 — Aerospace Bracket</h2><span class="status">READY FOR REVIEW</span></div>
                 <p style="margin: 12px 0;">Qty: 25 pcs · Material: 7075-T6 Aluminum · Lead Time: 5 Days</p>
@@ -171,7 +171,7 @@
               </div>
 
               <div class="dash-panel">
-                <div class="panel-head"><h2>Quote #Q-2051 — Custom Enclosure</h2><span style="color:#e0a030">CALCULATING DFM</span></div>
+                <div class="panel-head"><h2>Quote #Q-2051 — Custom Enclosure</h2><span class="status status-pending">CALCULATING DFM</span></div>
                 <p style="margin: 12px 0;">Qty: 100 pcs · Material: Stainless Steel 304 · Submitted: Today</p>
                 <p style="color:var(--muted)">Our engineering team is conducting DFM clearance checks on your uploaded STEP file.</p>
               </div>
@@ -214,10 +214,10 @@
 
             <div class="dash-panel">
               <ul class="file-list">
-                <li style="display:flex; justify-content:space-between; align-items:center;"><div><b>CMM_Report_FG-2048_LotA.pdf</b><small>100% Dimensional Inspection · 1.8 MB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading CMM Inspection Report...'); return false;">Download ↗</a></li>
-                <li style="display:flex; justify-content:space-between; align-items:center;"><div><b>Material_Cert_6061-T6_Heat8812.pdf</b><small>Mill Test Certificate · 780 KB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading Material Test Certificate...'); return false;">Download ↗</a></li>
-                <li style="display:flex; justify-content:space-between; align-items:center;"><div><b>First_Article_Inspection_FAI_2045.pdf</b><small>AS9102 Form 1-3 · 2.4 MB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading FAI Report...'); return false;">Download ↗</a></li>
-                <li style="display:flex; justify-content:space-between; align-items:center;"><div><b>Certificate_of_Conformance_FG2039.pdf</b><small>CoC Compliance · 520 KB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading CoC Document...'); return false;">Download ↗</a></li>
+                <li><div><b>CMM_Report_FG-2048_LotA.pdf</b><small>100% Dimensional Inspection · 1.8 MB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading CMM Inspection Report...'); return false;">Download ↗</a></li>
+                <li><div><b>Material_Cert_6061-T6_Heat8812.pdf</b><small>Mill Test Certificate · 780 KB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading Material Test Certificate...'); return false;">Download ↗</a></li>
+                <li><div><b>First_Article_Inspection_FAI_2045.pdf</b><small>AS9102 Form 1-3 · 2.4 MB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading FAI Report...'); return false;">Download ↗</a></li>
+                <li><div><b>Certificate_of_Conformance_FG2039.pdf</b><small>CoC Compliance · 520 KB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading CoC Document...'); return false;">Download ↗</a></li>
               </ul>
             </div>
           </div>
@@ -256,9 +256,9 @@
 
             <div class="dash-panel">
               <ul class="file-list">
-                <li style="display:flex; justify-content:space-between; align-items:center;"><div><b>FG-2048_REV-B.step</b><small>3D Solid Model · 12.4 MB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading STEP File...'); return false;">Download STEP</a></li>
-                <li style="display:flex; justify-content:space-between; align-items:center;"><div><b>FG-2048_Tolerance_Drawing.pdf</b><small>2D Blueprint with GD&T · 3.1 MB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading 2D Blueprint...'); return false;">Download PDF</a></li>
-                <li style="display:flex; justify-content:space-between; align-items:center;"><div><b>Sensor_Bracket_REV3.iges</b><small>CAD Surface Geometry · 8.9 MB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading IGES File...'); return false;">Download IGES</a></li>
+                <li><div><b>FG-2048_REV-B.step</b><small>3D Solid Model · 12.4 MB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading STEP File...'); return false;">Download STEP</a></li>
+                <li><div><b>FG-2048_Tolerance_Drawing.pdf</b><small>2D Blueprint with GD&T · 3.1 MB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading 2D Blueprint...'); return false;">Download PDF</a></li>
+                <li><div><b>Sensor_Bracket_REV3.iges</b><small>CAD Surface Geometry · 8.9 MB</small></div><a class="btn btn-ghost" href="#" onclick="alert('Downloading IGES File...'); return false;">Download IGES</a></li>
               </ul>
             </div>
           </div>

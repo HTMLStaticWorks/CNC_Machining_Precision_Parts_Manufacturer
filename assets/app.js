@@ -223,7 +223,7 @@ document.addEventListener('click', (e) => {
   }
 
   const dropBtn = e.target.closest('.dropbtn');
-  if (dropBtn && window.innerWidth <= 768) {
+  if (dropBtn && window.innerWidth <= 1024) {
     e.preventDefault();
     const dropdown = dropBtn.closest('.dropdown');
     if (dropdown) {
@@ -237,7 +237,7 @@ document.addEventListener('click', (e) => {
   if (toggleBtn) {
     // If on Dashboard page, toggle Dashboard Sidebar Drawer
     const sidebar = document.querySelector('.dashboard-sidebar');
-    if (sidebar && window.innerWidth <= 768) {
+    if (sidebar && window.innerWidth <= 1024) {
       sidebar.classList.toggle('open');
       toggleBtn.setAttribute('aria-expanded', sidebar.classList.contains('open'));
       return;
@@ -260,7 +260,7 @@ document.addEventListener('click', (e) => {
 
   // Close Dashboard Sidebar Drawer on tab click or outside click
   const dashTab = e.target.closest('.dash-tab');
-  if (dashTab && window.innerWidth <= 768) {
+  if (dashTab && window.innerWidth <= 1024) {
     const openSidebar = document.querySelector('.dashboard-sidebar.open');
     if (openSidebar) openSidebar.classList.remove('open');
   }
