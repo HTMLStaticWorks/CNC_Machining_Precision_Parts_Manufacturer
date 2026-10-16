@@ -2,12 +2,11 @@ const i18n = {
   en: {
     'util-left': 'PRECISION CNC MANUFACTURING',
     'util-right': 'Engineering support · Quality documentation · Client portal',
-    'nav-home': 'HOME ▾',
-    'nav-home1': 'Home 1',
-    'nav-home2': 'Home 2',
+    'nav-home1': 'HOME 1',
+    'nav-home2': 'HOME 2',
     'nav-about': 'ABOUT',
     'nav-products': 'PRODUCTS',
-    'nav-services': 'SERVICES ▾',
+    'nav-services': 'SERVICES',
     'nav-serv1': 'CNC Milling',
     'nav-serv2': 'CNC Turning',
     'nav-serv3': 'Prototyping & Engineering',
@@ -51,12 +50,11 @@ const i18n = {
   ar: {
     'util-left': 'التصنيع الدقيق بالحاسوب (CNC)',
     'util-right': 'دعم هندسي · توثيق الجودة · بوابة العملاء',
-    'nav-home': 'الرئيسية ▾',
-    'nav-home1': 'الصفحة الرئيسية 1',
-    'nav-home2': 'الصفحة الرئيسية 2',
+    'nav-home1': 'الرئيسية 1',
+    'nav-home2': 'الرئيسية 2',
     'nav-about': 'حول الشركة',
     'nav-products': 'المنتجات',
-    'nav-services': 'الخدمات ▾',
+    'nav-services': 'الخدمات',
     'nav-serv1': 'تفريز CNC',
     'nav-serv2': 'خراطة CNC',
     'nav-serv3': 'النماذج الأولية والهندسة',
@@ -105,10 +103,11 @@ const headerHTML = `
   <div class="container nav">
     <a class="brand" href="index.html"><i aria-label="Forgea logo"></i></a>
     <nav class="navlinks">
-      <div class="dropdown"><button class="dropbtn">HOME ▾</button><div class="dropmenu"><a href="index.html">Home 1</a><a href="home-2.html">Home 2</a></div></div>
+      <a href="index.html">HOME 1</a>
+      <a href="home-2.html">HOME 2</a>
       <a href="about.html">ABOUT</a>
       <a href="products.html">PRODUCTS</a>
-      <div class="dropdown"><button class="dropbtn">SERVICES ▾</button><div class="dropmenu"><a href="milling.html">CNC Milling</a><a href="turning.html">CNC Turning</a><a href="prototyping.html">Prototyping & Engineering</a></div></div>
+      <a href="services.html">SERVICES</a>
       <a href="contact.html">CONTACT</a>
       <div class="mobile-actions">
         <a class="btn btn-ghost btn-login" href="login.html">LOGIN</a>
@@ -153,8 +152,8 @@ const dashboardHeaderHTML = `
 const footerHTML = `
 <footer class="footer"><div class="container"><div class="footer-grid">
 <div class="footer-brand"><a class="brand" href="index.html"><i></i></a><p>Precision CNC machining and custom manufacturing for demanding industrial applications.</p><div class="socials"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="X">𝕏</a><a href="#" aria-label="YouTube">▶</a></div></div>
-<div><h4>COMPANY</h4><a href="about.html">About</a><a href="products.html">Products</a><a href="contact.html">Contact</a><a href="about.html">Quality</a></div>
-<div><h4>SERVICES</h4><a href="milling.html">CNC Milling</a><a href="turning.html">CNC Turning</a><a href="prototyping.html">Prototyping</a></div>
+<div><h4>COMPANY</h4><a href="about.html">About</a><a href="products.html">Products</a><a href="contact.html">Contact</a><a href="about.html#quality">Quality Control</a></div>
+<div><h4>SERVICES</h4><a href="services.html#milling">CNC Milling</a><a href="services.html#turning">CNC Turning</a><a href="services.html#prototyping">Prototyping & DFM</a><a href="services.html#finishing">Surface Finishing</a></div>
 <div><h4>CLIENTS</h4><a href="login.html">Client Login</a><a href="contact.html">Request a Quote</a><a href="dashboard.html">Order Tracking</a></div>
 </div><div class="footer-newsletter"><div><h4>ENGINEERING UPDATES</h4><small>Occasional manufacturing insights. No noise.</small></div><form class="newsletter-form" id="newsletterForm"><input type="email" placeholder="Work email" required><button class="btn btn-primary">Subscribe</button></form></div><div class="copyright"><span>© 2026 Forgea. Website concept.</span><span>Privacy · Terms · Cookies</span></div></div></footer>`;
 

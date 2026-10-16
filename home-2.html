@@ -1,158 +1,387 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Forgea — Manufacturing Capacity</title><link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="stylesheet" href="assets/style.css"></head>
-<body data-page="home2"><div id="site-header"></div>
-<main>
-<section class="hero hero-capacity"><div class="hero-bg" style="--bg:url('https://images.unsplash.com/photo-1764114235916-74de69e6851f?auto=format&fit=crop&fm=jpg&q=85&w=1800')"></div><div class="container hero-content"><div class="eyebrow">HOME 02 / PRODUCTION FOCUS</div><h1>Production capacity.<br><span>Engineering control.</span></h1><p>A focused manufacturing workflow for teams that need repeatability, visibility and documented quality.</p><div class="actions"><a class="btn btn-primary" href="contact.html">Request Production Quote ↗</a><a class="btn btn-ghost" href="dashboard.html">Client Portal</a></div></div></section>
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">WORKFLOW</div>
-        <h2>A clear path to production.</h2>
-      </div>
-      <p>Disciplined stage gates from digital CAD file to verified delivery.</p>
-    </div>
-    <div class="timeline">
-      <article>
-        <div class="step-img-box">
-          <img src="assets/images/design_review.jpg" alt="Design Review Workflow" class="step-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/cnc_parts.svg';">
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description"
+    content="Forgea Home 2: Manufacturing Capacity, CNC Machine Types, Hardware & Software Solutions, Quality Control, Surface Finishing, and Precision Components.">
+  <title>Forgea — Manufacturing Capacity & CNC Solutions</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body data-page="home2">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="site-header"></div>
+
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero hero-capacity">
+      <div class="hero-bg hero-bg-flipped"
+        style="--bg:url('https://images.pexels.com/photos/8956445/pexels-photo-8956445.jpeg')"></div>
+      <div class="container hero-content">
+        <div class="eyebrow">PRODUCTION CAPACITY & ENGINEERING SOLUTIONS</div>
+        <h1>Production capacity.<br><span>Engineering control.</span></h1>
+        <p>A focused manufacturing workflow for engineering teams that require repeatability, full traceability, and
+          documented sub-micron quality.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="contact.html">Request Production Quote ↗</a>
+          <a class="btn btn-ghost" href="dashboard.html">Client Portal</a>
         </div>
-        <b>01</b>
-        <h3>Design Review</h3>
-        <p>Review geometry, material, tolerances and automated DFM clearance.</p>
-      </article>
-      <article>
-        <div class="step-img-box">
-          <img src="assets/images/process_planning.jpg" alt="Process Planning" class="step-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/custom_components.svg';">
+      </div>
+    </section>
+
+    <!-- CNC Machine Types & Equipment -->
+    <section class="section" id="machinery">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">PLANT INFRASTRUCTURE</div>
+            <h2>CNC Machine Types & Equipment.</h2>
+          </div>
+          <p>Continuous investment in rigid, high-precision multi-axis CNC machine tools, live-tooling lathes, and
+            sub-micron Wire EDM systems.</p>
         </div>
-        <b>02</b>
-        <h3>Process Planning</h3>
-        <p>Define tooling, setups, inspection points and G-code simulation.</p>
-      </article>
-      <article>
-        <div class="step-img-box">
-          <img src="assets/images/machining_process.jpg" alt="Machining Operations" class="step-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/production_runs.svg';">
+
+        <div class="machinery-grid">
+          <!-- 5-Axis Milling -->
+          <div class="machinery-card">
+            <img src="https://images.unsplash.com/photo-1713371398485-7bde1bde9def?auto=format&fit=crop&q=80&w=700"
+              alt="5-Axis CNC Milling Center Haas UMC-750" class="machinery-card-img" loading="lazy">
+            <div class="machinery-card-body">
+              <span class="machinery-badge">5-Axis Simultaneous</span>
+              <h3>5-Axis CNC Machining Centers</h3>
+              <p>Continuous 5-axis simultaneous milling centers engineered for complex aerospace impellers,
+                multi-faceted housings, and deep-pocket contoured components in a single setup.</p>
+              <div class="machinery-specs-list">
+                <div class="machinery-spec-item">
+                  <small>Envelope (X/Y/Z)</small>
+                  <strong>762 × 508 × 508 mm</strong>
+                </div>
+                <div class="machinery-spec-item">
+                  <small>Spindle Speed</small>
+                  <strong>15,000 RPM Direct-Drive</strong>
+                </div>
+                <div class="machinery-spec-item">
+                  <small>Positioning Accuracy</small>
+                  <strong>±0.005 mm (0.0002 in)</strong>
+                </div>
+                <div class="machinery-spec-item">
+                  <small>Tool Changer</small>
+                  <strong>40+1 Side-Mount ATC</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live-Tooling Turning Lathe -->
+          <div class="machinery-card">
+            <img src="https://images.unsplash.com/photo-1666618090858-fbcee636bd3e?auto=format&fit=crop&q=80&w=700"
+              alt="Mazak Live-Tooling CNC Lathe" class="machinery-card-img" loading="lazy">
+            <div class="machinery-card-body">
+              <span class="machinery-badge">Turn-Mill Center</span>
+              <h3>Live-Tooling CNC Turning Lathes</h3>
+              <p>Dual-spindle turn-mill centers with Y-axis rotary live tooling. Simultaneously turns, cross-drills,
+                taps, and mills precision shafts, bushings, and rotational assemblies.</p>
+              <div class="machinery-specs-list">
+                <div class="machinery-spec-item">
+                  <small>Max Turning Diam.</small>
+                  <strong>Ø 380 mm × 650 mm L</strong>
+                </div>
+                <div class="machinery-spec-item">
+                  <small>Bar Through Capacity</small>
+                  <strong>Ø 80 mm Bar Feeder</strong>
+                </div>
+                <div class="machinery-spec-item">
+                  <small>Sub-Spindle Sync</small>
+                  <strong>0.001° C-Axis Indexing</strong>
+                </div>
+                <div class="machinery-spec-item">
+                  <small>Live Tool RPM</small>
+                  <strong>6,000 RPM Milling Spindle</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- High-Speed VMC -->
+          <div class="machinery-card">
+            <img src="assets/images/vertical.jpg" alt="High Speed Vertical Machining Center" class="machinery-card-img"
+              loading="lazy">
+            <div class="machinery-card-body">
+              <span class="machinery-badge">High-Speed VMC</span>
+              <h3>High-Velocity Vertical Mills</h3>
+              <p>High-speed tapping and vertical machining centers equipped with 24,000 RPM spindles for rapid cycle
+                times on electronic enclosures, heatsinks, and aluminum plates.</p>
+              <div class="machinery-specs-list">
+                <div class="machinery-spec-item">
+                  <small>Rapid Traverse</small>
+                  <strong>50 m/min High-Speed</strong>
+                </div>
+                <div class="machinery-spec-item">
+                  <small>Spindle RPM</small>
+                  <strong>24,000 RPM Ceramic Spindle</strong>
+                </div>
+                <div class="machinery-spec-item">
+                  <small>Repeatability</small>
+                  <strong>±0.002 mm Sub-Micron</strong>
+                </div>
+                <div class="machinery-spec-item">
+                  <small>Chip-to-Chip</small>
+                  <strong>1.4 sec Tool Exchange</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wire EDM & Grinding -->
+          <div class="machinery-card">
+            <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=700"
+              alt="Precision Wire EDM Machine" class="machinery-card-img" loading="lazy">
+            <div class="machinery-card-body">
+              <span class="machinery-badge">Ultra-Precision EDM</span>
+              <h3>Precision Wire EDM & Surface Grinding</h3>
+              <p>Sub-micron dielectric spark erosion for hardened steels (up to 65 HRC), internal sharp corners,
+                microscopic splines, keyways, and delicate thin-walled features.</p>
+              <div class="machinery-specs-list">
+                <div class="machinery-spec-item">
+                  <small>Wire Diameter</small>
+                  <strong>Ø 0.10 to 0.30 mm Wire</strong>
+                </div>
+                <div class="machinery-spec-item">
+                  <small>Best Finish</small>
+                  <strong>Ra 0.1 µm Mirror Spark</strong>
+                </div>
+                <div class="machinery-spec-item">
+                  <small>Tolerance Limit</small>
+                  <strong>±0.001 mm (0.00004 in)</strong>
+                </div>
+                <div class="machinery-spec-item">
+                  <small>Taper Angle</small>
+                  <strong>Up to ±30° Multi-Axis</strong>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <b>03</b>
-        <h3>Machining</h3>
-        <p>Run controlled CNC multi-axis milling and live-tooling turning.</p>
-      </article>
-      <article>
-        <div class="step-img-box">
-          <img src="assets/images/quality_inspection.svg" alt="Quality Inspection" class="step-img" loading="lazy">
+      </div>
+    </section>
+
+    <!-- Hardware & Software Solutions / Industries & Applications -->
+    <section class="section dark-band" id="solutions">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">DIGITAL ARCHITECTURE & MARKETS</div>
+            <h2>Hardware & Software Solutions & Industries & Applications.</h2>
+          </div>
+          <p>Connecting industry-standard CAD/CAM programming and digital twin simulation with mission-critical
+            applications across key industrial sectors.</p>
         </div>
-        <b>04</b>
-        <h3>Inspection</h3>
-        <p>Verify critical dimensions via Zeiss CMM and attach MTR documents.</p>
-      </article>
-    </div>
-  </div>
-</section>
 
-<section class="section dark-band">
-  <div class="container split">
-    <div>
-      <div class="eyebrow">PRODUCTION VISIBILITY</div>
-      <h2>Know where your order stands.</h2>
-      <p>Clients can use the portal concept to view order stages, quotes, files, invoices and inspection documents.</p>
-    </div>
-    <div class="dashboard-mini">
-      <div class="mini-top">ORDER #FG-2048 <span>IN PRODUCTION</span></div>
-      <div class="bar"><i style="width:68%"></i></div>
-      <div class="mini-steps"><span>Quote</span><span>Review</span><span class="active">Machining</span><span>Inspection</span><span>Ship</span></div>
-    </div>
-  </div>
-</section>
+        <!-- Part A: Hardware & Software Solutions -->
+        <h3 style="font-size:20px; color:var(--text); margin-bottom:16px;">Advanced Hardware & Software Infrastructure
+        </h3>
+        <div class="tech-solutions-grid">
+          <div class="solution-pillar-card">
+            <h3><span>💻</span> CAD/CAM Programming & Toolpath Engine</h3>
+            <p>Mastercam 2026, HyperMill, and Siemens NX suites driving dynamic trochoidal milling, high-speed adaptive
+              clearing, and multi-axis 5-axis simultaneous toolpaths.</p>
+            <div class="software-pills">
+              <span class="software-pill">Mastercam 5-Axis</span>
+              <span class="software-pill">HyperMill</span>
+              <span class="software-pill">Siemens NX CAD/CAM</span>
+              <span class="software-pill">GibbsCAM</span>
+            </div>
+          </div>
 
-<!-- NEW SECTION 1: Live Machine Capacity Ticker -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">PLANT STATUS</div>
-        <h2>Live manufacturing capacity.</h2>
-      </div>
-      <p>Real-time machine scheduling updates to assist with job staging and scheduling.</p>
-    </div>
-    <div class="capacity-grid">
-      <div class="capacity-card">
-        <div><span class="pulse-light"></span><strong>5-Axis CNC Milling</strong></div>
-        <div class="cap-bar"><div class="cap-bar-fill" style="width: 78%;"></div></div>
-        <small style="color:var(--muted)">78% Booked · Est. Lead Time: 5 Days</small>
-      </div>
-      <div class="capacity-card">
-        <div><span class="pulse-light"></span><strong>CNC Turning Lathes</strong></div>
-        <div class="cap-bar"><div class="cap-bar-fill" style="width: 62%;"></div></div>
-        <small style="color:var(--muted)">62% Booked · Est. Lead Time: 3 Days</small>
-      </div>
-      <div class="capacity-card">
-        <div><span class="pulse-light"></span><strong>Prototyping Express Bay</strong></div>
-        <div class="cap-bar"><div class="cap-bar-fill" style="width: 35%;"></div></div>
-        <small style="color:var(--green); font-weight: bold;">Immediate Capacity · 24h RUSH</small>
-      </div>
-    </div>
-  </div>
-</section>
+          <div class="solution-pillar-card">
+            <h3><span>🛡️</span> Vericut Digital Twin Kinematic Simulation</h3>
+            <p>100% G-code verification on full digital machine models prior to shop-floor loading. Prevents tool
+              collisions, gouging, and spindle stalls before chip creation.</p>
+            <div class="software-pills">
+              <span class="software-pill">Vericut G-Code Validation</span>
+              <span class="software-pill">Machine Kinematics 3D</span>
+              <span class="software-pill">Gouge Protection</span>
+              <span class="software-pill">Cycle Time Optimization</span>
+            </div>
+          </div>
 
-<!-- NEW SECTION 2: DFM & Raw Material In-Stock Staging -->
-<section class="section dark-band">
-  <div class="container">
-    <div class="eyebrow">RAW MATERIAL STAGING</div>
-    <h2>Certified raw stock inventory ready to machine.</h2>
-    <div class="stock-staging-grid">
-      <div class="stock-item">
-        <span class="tag-badge">IN STOCK</span>
-        <h3>Aluminum 6061-T6 / 7075-T6</h3>
-        <p>Plate & round bar stock on floor. Immediate dispatch for 24h rush jobs.</p>
-      </div>
-      <div class="stock-item">
-        <span class="tag-badge">IN STOCK</span>
-        <h3>Stainless 304 / 316L / 17-4PH</h3>
-        <p>Passivated bar stock & precision plate with mill test reports (MTR).</p>
-      </div>
-      <div class="stock-item">
-        <span class="tag-badge">IN STOCK</span>
-        <h3>Titanium Gr 5 & Engineering Plastics</h3>
-        <p>Ti-6Al-4V aerospace billet & PEEK / Delrin rods for medical components.</p>
-      </div>
-    </div>
-  </div>
-</section>
+          <div class="solution-pillar-card">
+            <h3><span>📡</span> Renishaw Closed-Loop In-Process Probing</h3>
+            <p>In-spindle wireless radio touch probes and non-contact laser tool setters that calibrate dynamic part
+              offsets, inspect feature positions mid-cycle, and auto-compensate tool wear.</p>
+            <div class="software-pills">
+              <span class="software-pill">Renishaw RMP60 Probe</span>
+              <span class="software-pill">Blum Laser Tool Setter</span>
+              <span class="software-pill">Live WCS Alignment</span>
+              <span class="software-pill">In-Cycle QC Feedback</span>
+            </div>
+          </div>
+        </div>
 
-<!-- NEW SECTION 3: Quality & ISO Compliance Seals -->
-<section class="section">
-  <div class="container">
-    <div class="eyebrow">QUALITY CERTIFICATIONS</div>
-    <h2>Documented quality compliance.</h2>
-    <div class="iso-badge-grid">
-      <div class="iso-badge-card">
-        <span class="iso-icon">🛡️</span>
-        <h3>ISO 9001:2015</h3>
-        <p>Quality management system certified for precision machining & assembly.</p>
       </div>
-      <div class="iso-badge-card">
-        <span class="iso-icon">✈️</span>
-        <h3>AS9100D Ready</h3>
-        <p>Strict lot traceability, material certifications, and flight-ready inspection standards.</p>
-      </div>
-      <div class="iso-badge-card">
-        <span class="iso-icon">🔬</span>
-        <h3>Full CMM Reports</h3>
-        <p>Dimensional inspection data provided with first-article and batch shipments.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="quote-banner capacity-banner">
-  <div class="container">
-    <div>
-      <div class="eyebrow">RESERVE PRODUCTION CAPACITY</div>
-      <h2>Scale your production run.<br>Lock in machine time today.</h2>
-      <p style="margin-top: 10px; font-size: 16px; color: #1e2a14; max-width: 640px;">Dedicated multi-axis CNC milling and live-tool turning bays staged for recurring production programs and batch manufacturing.</p>
-    </div>
-    <a class="btn btn-primary" href="contact.html">Reserve Machine Time ↗</a>
-  </div>
-</section>
+    <!-- Quality Control & Inspection -->
+    <section class="section" id="quality">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">METROLOGY & COMPLIANCE</div>
+            <h2>Quality Control & Inspection.</h2>
+          </div>
+          <p>Documented quality assurance backed by automated CMM inspection, calibrated profilometers, and
+            comprehensive AS9102 inspection packages.</p>
+        </div>
 
-</main><div id="site-footer"></div><script src="assets/app.js"></script></body></html>
+        <!-- Quality Badges Grid -->
+        <div class="iso-badge-grid" style="margin-top: 36px;">
+          <div class="iso-badge-card">
+            <span class="iso-icon">🛡️</span>
+            <h3>ISO 9001:2015</h3>
+            <p>Certified Quality Management System ensuring systematic risk analysis, calibrated tooling, and customer
+              satisfaction.</p>
+          </div>
+          <div class="iso-badge-card">
+            <span class="iso-icon">✈️</span>
+            <h3>AS9100D Ready</h3>
+            <p>Aerospace and defense quality standard with strict counterfeit material prevention and complete supply
+              chain custody.</p>
+          </div>
+          <div class="iso-badge-card">
+            <span class="iso-icon">🔬</span>
+            <h3>100% CMM Verified</h3>
+            <p>Every critical bore, bearing journal, and geometrical true position feature is checked with verifiable
+              metrology data.</p>
+          </div>
+          <div class="iso-badge-card">
+            <span class="iso-icon">📜</span>
+            <h3>Full MTR Documentation</h3>
+            <p>Mill test certificates documenting chemical composition, mechanical yield strength, and heat treat
+              certification.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Our CNC Manufacturing Services -->
+    <section class="section dark-band" id="why-choose">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">THE FORGEA ADVANTAGE</div>
+            <h2>Why Choose Our CNC Manufacturing Services.</h2>
+          </div>
+          <p>Six core manufacturing advantages that ensure your critical components are delivered on time, within spec,
+            and fully documented.</p>
+        </div>
+
+        <div class="why-choose-grid">
+          <div class="why-choose-card">
+            <div class="why-icon-wrap">🎯</div>
+            <div class="why-card-content">
+              <h3>±0.005mm Precision Guarantee</h3>
+              <p>Top-tier Haas, Mazak, and Brother CNC machinery calibrated with Renishaw laser interferometers to
+                maintain sub-micron dimensional repeatability.</p>
+            </div>
+          </div>
+
+          <div class="why-choose-card">
+            <div class="why-icon-wrap">🔬</div>
+            <div class="why-card-content">
+              <h3>100% In-House CMM Metrology</h3>
+              <p>Our dedicated temperature-controlled Zeiss CMM lab inspects every critical tolerance and provides full
+                dimensional deviation reports with every batch.</p>
+            </div>
+          </div>
+
+          <div class="why-choose-card">
+            <div class="why-icon-wrap">⚡</div>
+            <div class="why-card-content">
+              <h3>24-Hour DFM & Fast Turnaround</h3>
+              <p>Get instant feedback on your 3D CAD models. Our senior machinists highlight potential cost savings and
+                tool clearances within 24 hours of submission.</p>
+            </div>
+          </div>
+
+          <div class="why-choose-card">
+            <div class="why-icon-wrap">📜</div>
+            <div class="why-card-content">
+              <h3>Traceable Raw Materials (MTRs)</h3>
+              <p>Every bar, plate, and billet is sourced from certified mills with chemical and physical test
+                certificates, ensuring complete material traceability.</p>
+            </div>
+          </div>
+
+          <div class="why-choose-card">
+            <div class="why-icon-wrap">📱</div>
+            <div class="why-card-content">
+              <h3>Transparent Client Portal Tracking</h3>
+              <p>Track real-time order progression from CAD review and CNC machining to CMM inspection and final
+                dispatch right through our digital customer portal.</p>
+            </div>
+          </div>
+
+          <div class="why-choose-card">
+            <div class="why-icon-wrap">🚀</div>
+            <div class="why-card-content">
+              <h3>99.4% On-Time Delivery Record</h3>
+              <p>Disciplined shop-floor ERP capacity staging ensures machine schedules are strictly maintained, so your
+                production lines never experience downtime.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Plant Live Machine Capacity Ticker -->
+        <div style="margin-top: 48px;">
+          <div class="eyebrow">LIVE SHOP FLOOR STATUS</div>
+          <h3>Current Plant Workload & Express Capacity</h3>
+          <div class="capacity-grid">
+            <div class="capacity-card">
+              <div><span class="pulse-light"></span><strong>5-Axis CNC Milling Bays</strong></div>
+              <div class="cap-bar">
+                <div class="cap-bar-fill" style="width: 78%;"></div>
+              </div>
+              <small style="color:var(--muted)">78% Scheduled · Next Bay Available: 4 Days</small>
+            </div>
+            <div class="capacity-card">
+              <div><span class="pulse-light"></span><strong>Live-Tooling CNC Lathes</strong></div>
+              <div class="cap-bar">
+                <div class="cap-bar-fill" style="width: 62%;"></div>
+              </div>
+              <small style="color:var(--muted)">62% Scheduled · Next Bay Available: 2 Days</small>
+            </div>
+            <div class="capacity-card">
+              <div><span class="pulse-light"></span><strong>Express Prototyping Bay</strong></div>
+              <div class="cap-bar">
+                <div class="cap-bar-fill" style="width: 30%;"></div>
+              </div>
+              <small style="color:var(--green); font-weight: bold;">Immediate Capacity · 24h/48h RUSH Ready</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="quote-banner capacity-banner">
+      <div class="container">
+        <div>
+          <div class="eyebrow">LOCK IN YOUR MACHINE TIME</div>
+          <h2>Scale your production run.<br>Reserve CNC capacity today.</h2>
+          <p style="margin-top: 10px; font-size: 16px; color: #1e2a14; max-width: 640px;">Dedicated multi-axis CNC
+            milling and live-tool turning bays staged for recurring production programs and batch manufacturing.</p>
+        </div>
+        <a class="btn btn-primary" href="contact.html">Reserve Machine Time ↗</a>
+      </div>
+    </section>
+
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/app.js"></script>
+</body>
+
+</html>
