@@ -9,6 +9,61 @@
   <title>Services — Forgea Precision CNC Machining</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    /* Mobile Drawer Active Link Highlight */
+    @media (max-width: 1100px) {
+      .navlinks > a.active,
+      .dropbtn.active {
+        background: rgba(155, 211, 63, 0.14) !important;
+        color: var(--green) !important;
+        font-weight: 800 !important;
+        border-left: 4px solid var(--green) !important;
+        border-bottom-color: transparent !important;
+        border-radius: 6px !important;
+        padding-left: 14px !important;
+      }
+      .navlinks > a.active::after,
+      .dropbtn.active::after {
+        display: inline-block !important;
+        content: '' !important;
+        position: static !important;
+        width: 8px !important;
+        height: 8px !important;
+        border-radius: 50% !important;
+        background: var(--green) !important;
+        box-shadow: 0 0 10px rgba(155, 211, 63, 0.7) !important;
+        margin-left: auto !important;
+        flex-shrink: 0 !important;
+      }
+      body.light .navlinks > a.active,
+      body.light .dropbtn.active {
+        background: #eaf5ed !important;
+        color: #166534 !important;
+        font-weight: 800 !important;
+        border-left: 4px solid #166534 !important;
+        border-bottom-color: transparent !important;
+        border-radius: 6px !important;
+        padding-left: 14px !important;
+      }
+      body.light .navlinks > a.active::after,
+      body.light .dropbtn.active::after {
+        background: #166534 !important;
+        box-shadow: 0 0 6px rgba(22, 101, 52, 0.35) !important;
+      }
+      body.rtl .navlinks > a.active,
+      html[dir="rtl"] .navlinks > a.active {
+        border-left: none !important;
+        border-right: 4px solid var(--green) !important;
+        padding-right: 14px !important;
+        padding-left: 16px !important;
+      }
+      body.rtl.light .navlinks > a.active,
+      html[dir="rtl"] body.light .navlinks > a.active {
+        border-left: none !important;
+        border-right: 4px solid #166534 !important;
+      }
+    }
+  </style>
 </head>
 
 <body data-page="services">
@@ -31,18 +86,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Sticky Jump Sub-Navigation -->
-    <nav class="service-nav-bar" aria-label="Service sections navigation">
-      <div class="container service-nav-inner">
-        <a href="#milling" class="service-nav-btn active">CNC Milling</a>
-        <a href="#turning" class="service-nav-btn">CNC Turning</a>
-        <a href="#prototyping" class="service-nav-btn">Rapid Prototyping</a>
-        <a href="#finishing" class="service-nav-btn">Surface Finishing</a>
-        <a href="#custom" class="service-nav-btn">Custom Machining</a>
-        <a href="#inspection" class="service-nav-btn">Quality Inspection</a>
-      </div>
-    </nav>
 
     <!-- CNC Milling -->
     <section class="section" id="milling">
@@ -74,7 +117,7 @@
             </div>
           </div>
           <div class="service-block-img-box">
-            <img src="assets/images/center.jpg" alt="5-Axis CNC Milling Center in Operation" loading="lazy">
+            <img src="assets/images/servi5axis.jpg" alt="5-Axis CNC Milling Center in Operation" loading="lazy">
           </div>
         </div>
 
@@ -136,8 +179,7 @@
 
         <div class="service-block-split">
           <div class="service-block-img-box">
-            <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&q=80&w=900"
-              alt="Precision CNC Turning Lathe Live Tooling" loading="lazy">
+            <img src="assets/images/Swiss Machining.jpeg" alt="Precision CNC Turning Lathe Live Tooling" loading="lazy">
           </div>
           <div>
             <h3>Dual Spindle Turn-Mill Machining</h3>
@@ -210,7 +252,8 @@
             </div>
           </div>
           <div class="service-block-img-box">
-            <img src="assets/images/process_planning.jpg" alt="Engineering Review and Process Planning" loading="lazy"
+            <img src="assets/images/Engineering Validation.jfif" alt="Engineering Review and Process Planning"
+              loading="lazy"
               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&q=80&w=900';">
           </div>
         </div>

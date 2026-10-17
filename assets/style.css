@@ -2270,7 +2270,8 @@ body.light .section p {
 }
 
 body.light .eyebrow {
-  color: var(--green2) !important;
+  color: #166534 !important;
+  font-weight: 800 !important;
 }
 
 /* Capabilities Cards (.cap-card) in Bright Mode */
@@ -2298,7 +2299,8 @@ body.light .cap-card p {
 }
 
 body.light .cap-card .link {
-  color: var(--green2) !important;
+  color: #166534 !important;
+  font-weight: 700 !important;
 }
 
 /* Dark Band Section (.dark-band) in Bright Mode */
@@ -3029,15 +3031,39 @@ body.light .case-spec-item strong { color: #111816 !important; }
   border: 1px solid #263330;
   border-radius: 8px;
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: transform 0.2s, border-color 0.2s;
 }
 .equip-card:hover {
   transform: translateY(-3px);
   border-color: var(--green);
 }
-.equip-card h3 { margin: 10px 0 6px 0; font-size: 18px; color: #fff; }
-.equip-card p { font-size: 14px; margin-bottom: 16px; }
-.equip-tag { font-size: 12px; font-weight: 800; color: var(--green); text-transform: uppercase; letter-spacing: 0.1em; }
+.equip-card h3 {
+  margin: 10px 0 6px 0;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #fff;
+  min-height: 28px;
+  display: flex;
+  align-items: flex-start;
+}
+.equip-card p {
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 16px;
+  min-height: 64px;
+  flex-grow: 1;
+}
+.equip-tag {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: auto;
+}
 
 body.light .equip-card {
   background: #ffffff !important;
@@ -3417,9 +3443,29 @@ body.light .social-icon-btn:hover {
   height: 100%;
 }
 
+.card-grid .cap-card h3 {
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 0 0 8px 0;
+  min-height: 28px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-grid .cap-card p {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0 0 14px 0;
+  min-height: 68px;
+  flex-grow: 1;
+}
+
 .card-grid .cap-card .link {
   margin-top: auto;
   padding-top: 14px;
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .visual-box,
@@ -3581,8 +3627,14 @@ body.light {
   --line: #cdd5d1;
   --text: #111716;
   --muted: #4e5a56;
+  --green: #166534;
+  --green2: #14532d;
   background-color: #f4f7f5 !important;
   color: #111716 !important;
+}
+
+body.light .brand i {
+  filter: brightness(0.48) saturate(1.4) !important;
 }
 
 body.light .header {
@@ -3602,7 +3654,20 @@ body.light .dropbtn {
 
 body.light .navlinks > a:hover,
 body.light .dropbtn:hover {
-  color: #4a8000 !important;
+  color: #166534 !important;
+}
+
+body.light .navlinks > a.active,
+body.light .dropbtn.active,
+body.light .dropdown.active > .dropbtn {
+  color: #166534 !important;
+  font-weight: 800 !important;
+}
+
+body.light .navlinks > a.active::after,
+body.light .dropbtn.active::after,
+body.light .dropdown.active > .dropbtn::after {
+  background: #166534 !important;
 }
 
 body.light .dropmenu {
@@ -3616,18 +3681,26 @@ body.light .dropmenu a {
 }
 
 body.light .dropmenu a:hover {
-  background: #eef4f0 !important;
-  color: #3b6b00 !important;
+  background: #eaf5ed !important;
+  color: #166534 !important;
+}
+
+body.light .dropmenu a.active {
+  color: #166534 !important;
+  background: #eaf5ed !important;
+  border-left: 3px solid #166534 !important;
 }
 
 body.light .btn-primary {
-  background: #6a9e11 !important;
+  background: #1e7a30 !important;
   color: #ffffff !important;
-  border-color: #6a9e11 !important;
+  border-color: #1e7a30 !important;
+  font-weight: 700 !important;
 }
 
 body.light .btn-primary:hover {
-  background: #54800b !important;
+  background: #155d24 !important;
+  border-color: #155d24 !important;
   color: #ffffff !important;
 }
 
@@ -4246,9 +4319,74 @@ html, body {
     color: var(--green2) !important;
   }
 
+  /* Mobile Drawer Active Link Highlight */
+  .navlinks > a.active,
+  .dropbtn.active {
+    background: rgba(155, 211, 63, 0.14) !important;
+    color: var(--green) !important;
+    font-weight: 800 !important;
+    border-left: 4px solid var(--green) !important;
+    border-bottom-color: transparent !important;
+    border-radius: 6px !important;
+    padding-left: 14px !important;
+  }
+
   .navlinks > a.active::after,
   .dropbtn.active::after {
-    display: none;
+    display: inline-block !important;
+    content: '' !important;
+    position: static !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    background: var(--green) !important;
+    box-shadow: 0 0 10px rgba(155, 211, 63, 0.7) !important;
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
+  }
+
+  body.light .navlinks > a.active,
+  body.light .dropbtn.active {
+    background: #eaf5ed !important;
+    color: #166534 !important;
+    font-weight: 800 !important;
+    border-left: 4px solid #166534 !important;
+    border-bottom-color: transparent !important;
+    border-radius: 6px !important;
+    padding-left: 14px !important;
+  }
+
+  body.light .navlinks > a.active::after,
+  body.light .dropbtn.active::after {
+    background: #166534 !important;
+    box-shadow: 0 0 6px rgba(22, 101, 52, 0.35) !important;
+  }
+
+  /* RTL Support for Mobile Drawer Active Link */
+  body.rtl .navlinks > a.active,
+  html[dir="rtl"] .navlinks > a.active,
+  body.rtl .dropbtn.active,
+  html[dir="rtl"] .dropbtn.active {
+    border-left: none !important;
+    border-right: 4px solid var(--green) !important;
+    padding-right: 14px !important;
+    padding-left: 16px !important;
+  }
+
+  body.rtl .navlinks > a.active::after,
+  html[dir="rtl"] .navlinks > a.active::after,
+  body.rtl .dropbtn.active::after,
+  html[dir="rtl"] .dropbtn.active::after {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  body.rtl.light .navlinks > a.active,
+  html[dir="rtl"] body.light .navlinks > a.active,
+  body.rtl.light .dropbtn.active,
+  html[dir="rtl"] body.light .dropbtn.active {
+    border-left: none !important;
+    border-right: 4px solid #166534 !important;
   }
 
   .dropdown {
@@ -4870,22 +5008,30 @@ body.light .products-action-card h3 {
   background: rgba(155, 211, 63, 0.1);
   padding: 4px 10px;
   border-radius: 4px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   align-self: flex-start;
+  min-height: 24px;
+  box-sizing: border-box;
 }
 
 .machinery-card h3 {
   font-size: 20px;
+  line-height: 1.3;
   margin: 0 0 8px 0;
   color: var(--text);
   font-weight: 700;
+  min-height: 52px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .machinery-card p {
   font-size: 14px;
   line-height: 1.55;
   color: var(--muted);
-  margin-bottom: 18px;
+  margin: 0 0 16px 0;
+  min-height: 76px;
+  flex-grow: 1;
 }
 
 .machinery-specs-list {
@@ -4895,6 +5041,7 @@ body.light .products-action-card h3 {
   gap: 10px;
   padding-top: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 74px;
 }
 
 .machinery-spec-item {
@@ -4930,23 +5077,42 @@ body.light .products-action-card h3 {
   padding: 26px;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .solution-pillar-card h3 {
   font-size: 20px;
-  margin: 0 0 10px 0;
+  line-height: 1.35;
+  margin: 0 0 12px 0;
   color: var(--text);
   font-weight: 700;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
+  min-height: 56px;
+}
+
+.solution-pillar-card h3 span {
+  flex-shrink: 0;
+  line-height: 1.35;
+}
+
+.solution-pillar-card p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0 0 16px 0;
+  min-height: 110px;
+  flex-grow: 1;
 }
 
 .software-pills {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 16px 0 0 0;
+  margin: auto 0 0 0;
+  align-content: flex-start;
+  min-height: 72px;
 }
 
 .software-pill {
@@ -4974,6 +5140,7 @@ body.light .products-action-card h3 {
   transition: transform 0.25s ease, border-color 0.25s ease;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .industry-feature-card:hover {
@@ -4987,10 +5154,11 @@ body.light .products-action-card h3 {
   object-fit: cover;
   border-bottom: 1px solid var(--line);
   background: #182223;
+  flex-shrink: 0;
 }
 
 .ind-card-body {
-  padding: 18px;
+  padding: 20px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -4998,16 +5166,22 @@ body.light .products-action-card h3 {
 
 .ind-card-body h3 {
   font-size: 18px;
-  margin: 0 0 6px 0;
+  line-height: 1.3;
+  margin: 0 0 8px 0;
   color: var(--text);
   font-weight: 700;
+  min-height: 48px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .ind-card-body p {
   font-size: 13.5px;
-  line-height: 1.5;
-  margin-bottom: 12px;
+  line-height: 1.55;
+  margin: 0 0 14px 0;
   color: var(--muted);
+  min-height: 84px;
+  flex-grow: 1;
 }
 
 .ind-tag {
@@ -5015,6 +5189,9 @@ body.light .products-action-card h3 {
   font-size: 12px;
   font-weight: 600;
   color: var(--green);
+  min-height: 20px;
+  display: flex;
+  align-items: center;
 }
 
 /* --- 3. Quality Control & Inspection Suite --- */
@@ -5032,6 +5209,7 @@ body.light .products-action-card h3 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
@@ -5046,6 +5224,7 @@ body.light .products-action-card h3 {
   object-fit: cover;
   border-bottom: 1px solid var(--line);
   background: #182223;
+  flex-shrink: 0;
 }
 
 .qc-card-body {
@@ -5057,16 +5236,22 @@ body.light .products-action-card h3 {
 
 .qc-card h3 {
   font-size: 19px;
+  line-height: 1.3;
   margin: 0 0 8px 0;
   color: var(--text);
   font-weight: 700;
+  min-height: 48px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .qc-card p {
   font-size: 14px;
   line-height: 1.55;
   color: var(--muted);
-  margin-bottom: 14px;
+  margin: 0 0 14px 0;
+  min-height: 92px;
+  flex-grow: 1;
 }
 
 .qc-card-specs {
@@ -5074,6 +5259,8 @@ body.light .products-action-card h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  min-height: 60px;
+  align-content: flex-start;
 }
 
 .qc-badge {
@@ -5101,6 +5288,7 @@ body.light .products-action-card h3 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
@@ -5115,6 +5303,7 @@ body.light .products-action-card h3 {
   position: relative;
   overflow: hidden;
   background: #182223;
+  flex-shrink: 0;
 }
 
 .finishing-img-box img {
@@ -5137,16 +5326,22 @@ body.light .products-action-card h3 {
 
 .finishing-body h3 {
   font-size: 18px;
-  margin: 0 0 6px 0;
+  line-height: 1.3;
+  margin: 0 0 8px 0;
   color: var(--text);
   font-weight: 700;
+  min-height: 48px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .finishing-body p {
   font-size: 13.5px;
-  line-height: 1.5;
+  line-height: 1.55;
   color: var(--muted);
-  margin-bottom: 14px;
+  margin: 0 0 14px 0;
+  min-height: 84px;
+  flex-grow: 1;
 }
 
 .finishing-meta {
@@ -5157,6 +5352,7 @@ body.light .products-action-card h3 {
   padding-top: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 12px;
+  min-height: 32px;
 }
 
 .finishing-meta strong {
@@ -5182,6 +5378,7 @@ body.light .products-action-card h3 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -5198,6 +5395,7 @@ body.light .products-action-card h3 {
   position: relative;
   background: #182223;
   border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
 }
 
 .comp-gallery-img-box img {
@@ -5240,16 +5438,22 @@ body.rtl .comp-card-badge {
 
 .comp-card-body h3 {
   font-size: 19px;
-  margin: 0 0 6px 0;
+  line-height: 1.3;
+  margin: 0 0 8px 0;
   color: var(--text);
   font-weight: 700;
+  min-height: 48px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .comp-card-body p {
   font-size: 13.5px;
-  line-height: 1.5;
+  line-height: 1.55;
   color: var(--muted);
-  margin-bottom: 16px;
+  margin: 0 0 14px 0;
+  min-height: 64px;
+  flex-grow: 1;
 }
 
 .comp-meta-strip {
@@ -5260,6 +5464,7 @@ body.rtl .comp-card-badge {
   padding-top: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 12px;
+  min-height: 52px;
 }
 
 .comp-meta-row {
@@ -5297,6 +5502,7 @@ body.rtl .comp-card-badge {
   padding: 26px;
   display: flex;
   flex-direction: column;
+  height: 100%;
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
@@ -5317,20 +5523,27 @@ body.rtl .comp-card-badge {
   justify-content: center;
   font-size: 20px;
   margin-bottom: 16px;
+  flex-shrink: 0;
 }
 
 .custom-sol-card h3 {
   font-size: 19px;
+  line-height: 1.3;
   margin: 0 0 8px 0;
   color: var(--text);
   font-weight: 700;
+  min-height: 48px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .custom-sol-card p {
   font-size: 14px;
   line-height: 1.55;
   color: var(--muted);
-  margin-bottom: 14px;
+  margin: 0 0 14px 0;
+  min-height: 84px;
+  flex-grow: 1;
 }
 
 .custom-bullet-list {
@@ -5340,6 +5553,7 @@ body.rtl .comp-card-badge {
   gap: 6px;
   font-size: 13px;
   color: var(--text);
+  min-height: 60px;
 }
 
 .custom-bullet-list span {
@@ -5370,6 +5584,7 @@ body.rtl .comp-card-badge {
   display: flex;
   gap: 18px;
   align-items: flex-start;
+  height: 100%;
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
@@ -5392,11 +5607,19 @@ body.rtl .comp-card-badge {
   font-size: 22px;
 }
 
+.why-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .why-card-content h3 {
   font-size: 18px;
+  line-height: 1.3;
   margin: 0 0 6px 0;
   color: var(--text);
   font-weight: 700;
+  min-height: 26px;
 }
 
 .why-card-content p {
@@ -5404,6 +5627,8 @@ body.rtl .comp-card-badge {
   line-height: 1.5;
   color: var(--muted);
   margin: 0;
+  min-height: 64px;
+  flex-grow: 1;
 }
 
 /* --- 8. Unified Services Page Elements --- */
@@ -5525,9 +5750,15 @@ body.light .software-pill {
 }
 
 body.light .comp-card-badge {
-  background: rgba(255, 255, 255, 0.94) !important;
-  color: #55791a !important;
-  border-color: #9bd33f !important;
+  background: #ffffff !important;
+  color: #166534 !important;
+  border: 1px solid #a8d5b5 !important;
+  font-weight: 800 !important;
+}
+
+body.light .comp-tolerance-pill {
+  color: #166534 !important;
+  font-weight: 700 !important;
 }
 
 body.light .service-nav-bar {
@@ -5543,13 +5774,154 @@ body.light .service-nav-btn {
 
 body.light .service-nav-btn:hover,
 body.light .service-nav-btn.active {
-  background: #eaf3ed !important;
-  border-color: var(--green2) !important;
-  color: var(--green2) !important;
+  background: #eaf5ed !important;
+  border-color: #166534 !important;
+  color: #166534 !important;
 }
 
 body.light .machinery-specs-list,
 body.light .finishing-meta,
 body.light .comp-meta-strip {
   border-top-color: #e2ece7 !important;
+}
+
+/* ==========================================================================
+   HIGH-CONTRAST GREEN TEXT & BADGE CONTRAST OVERRIDES FOR LIGHT MODE
+   WCAG AAA Compliant Contrast on White (#ffffff), Panels & Bands (#e5eae6)
+   ========================================================================== */
+
+/* Eyebrows across all light mode sections (Hero eyebrow stays bright on dark overlay) */
+body.light .eyebrow,
+body.light .section-head .eyebrow,
+body.light .material-section .eyebrow,
+body.light .light-grid .eyebrow {
+  color: #166534 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.18em;
+}
+
+body.light .hero .eyebrow,
+body.light .page-hero .eyebrow,
+body.light .hero h1 span,
+body.light .page-hero h1 span {
+  color: #9bd33f !important;
+}
+
+/* Industry Feature Card Tags (e.g. AS9102, Ra 0.2, Runout, Inconel specs) */
+body.light .ind-tag {
+  color: #166534 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em;
+}
+
+/* Equipment Fleet & Machinery Badges */
+body.light .machinery-badge {
+  color: #166534 !important;
+  background: #eaf5ed !important;
+  border: 1px solid #a8d5b5 !important;
+  font-weight: 800 !important;
+}
+
+/* Quality Control & Inspection Badges */
+body.light .qc-badge {
+  color: #166534 !important;
+  background: #eaf5ed !important;
+  border: 1px solid #a8d5b5 !important;
+  font-weight: 700 !important;
+}
+
+/* Tolerance Matrix Table Badges */
+body.light .tag-badge {
+  color: #166534 !important;
+  background: #eaf5ed !important;
+  border: 1px solid #a8d5b5 !important;
+  font-weight: 700 !important;
+}
+
+/* Surface Finishing Specification Highlights */
+body.light .finishing-meta strong {
+  color: #166534 !important;
+  font-weight: 700 !important;
+}
+
+/* Card Links and Action Links */
+body.light .link,
+body.light .cap-card .link,
+body.light .card-grid .cap-card .link {
+  color: #166534 !important;
+  font-weight: 700 !important;
+}
+
+body.light .link:hover,
+body.light .cap-card:hover .link {
+  color: #14532d !important;
+}
+
+/* Custom Machining Solutions Icons & Bullets */
+body.light .custom-sol-icon,
+body.light .why-icon-wrap {
+  color: #166534 !important;
+  background: #eaf5ed !important;
+  border: 1px solid #a8d5b5 !important;
+}
+
+body.light .custom-bullet-list span::before {
+  color: #166534 !important;
+  font-weight: bold;
+}
+
+/* Equipment, Team, FAQ, Telemetry, and Matrix Components */
+body.light .equip-tag,
+body.light .team-role,
+body.light .faq-item.open .faq-question,
+body.light .telemetry-line time,
+body.light .perk-box span,
+body.light .comp-table th,
+body.light .mini-steps .active,
+body.light .progress-labels .active,
+body.light .status {
+  color: #166534 !important;
+}
+
+/* Toggles & Interactive Elements */
+body.light .rtl-toggle:hover,
+body.light .rtl-toggle.active,
+body.light .theme-toggle:hover {
+  border-color: #166534 !important;
+  color: #166534 !important;
+  background: #eaf5ed !important;
+}
+
+body.light .dash-tab.active {
+  background: #166534 !important;
+  color: #ffffff !important;
+}
+
+/* Responsive card alignment adaptation */
+@media (max-width: 768px) {
+  .solution-pillar-card h3,
+  .solution-pillar-card p,
+  .software-pills,
+  .ind-card-body h3,
+  .ind-card-body p,
+  .machinery-card h3,
+  .machinery-card p,
+  .machinery-specs-list,
+  .qc-card h3,
+  .qc-card p,
+  .qc-card-specs,
+  .finishing-body h3,
+  .finishing-body p,
+  .card-grid .cap-card h3,
+  .card-grid .cap-card p,
+  .comp-card-body h3,
+  .comp-card-body p,
+  .custom-sol-card h3,
+  .custom-sol-card p,
+  .why-card-content h3,
+  .why-card-content p,
+  .equip-card h3,
+  .equip-card p {
+    min-height: auto;
+  }
 }
